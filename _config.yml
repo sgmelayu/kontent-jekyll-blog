@@ -1,0 +1,7 @@
+future: true
+name: Radek
+sass:
+  style: compact # possible values: nested expanded compact compressed
+collections:
+  authors:
+    output: true
