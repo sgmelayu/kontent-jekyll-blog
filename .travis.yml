@@ -2,6 +2,10 @@ language: ruby
 rvm:
   - 2.5.3
 
-before_install: gem install jekyll bundler
-
-script: "bundle exec jekyll build"
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
