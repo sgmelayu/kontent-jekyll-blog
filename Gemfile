@@ -21,3 +21,7 @@ gem "github-pages", group: :jekyll_plugins
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :jekyll_plugins do
+  gem 'jekyll-kentico', '0.0.1', :path => 'gems/jekyll-kentico'
+end

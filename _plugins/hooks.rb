@@ -1,5 +1,6 @@
 require 'net/http'
 require 'json'
+require 'date'
 require 'fileutils'
 
 POSTS_DIR = '_posts'
@@ -7,9 +8,10 @@ PROJECT_ID = '1d0ae542-e596-00a1-b8c0-4a112a8d8c0c'
 DELIVERY_URL = "https://deliver.kenticocloud.com/#{PROJECT_ID}/items"
 
 class Post
-  attr_reader :date, :author, :title, :content
+  attr_reader :id, :date, :author, :title, :content
 
-  def initialize(date, author, title, content)
+  def initialize(id, date, author, title, content)
+    @id = id
     @date = date
     @author = author
     @title = title
@@ -36,12 +38,15 @@ def get_posts
   posts = []
 
   items.each do |item|
+    id = item['system']['id']
     elements = item['elements']
+
     date = Date.parse elements['date']['value']
+    author = elements['author']['value']
     title = elements['title']['value']
     content = elements['content']['value']
 
-    post = Post.new(date, 'Unknown', title, content)
+    post = Post.new(id, date, author, title, content)
 
     posts << post
   end
@@ -50,11 +55,11 @@ def get_posts
 end
 
 Jekyll::Hooks.register :site, :after_init do
-  FileUtils.rm_r POSTS_DIR
+  FileUtils.rm_r POSTS_DIR if File.directory? POSTS_DIR
   Dir.mkdir POSTS_DIR
 
   get_posts.each do |post|
-    path = "#{POSTS_DIR}/#{post.date.to_s}-#{post.title}.md"
+    path = "#{POSTS_DIR}/#{post.date.to_s}-#{post.id}.md"
     raw_post = to_post(post)
 
     File.open(path, 'w') do |file|
