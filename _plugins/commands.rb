@@ -1,11 +1,18 @@
-require 'net/http'
+require 'http'
 require 'json'
 require 'date'
 require 'fileutils'
 
 POSTS_DIR = '_posts'
 PROJECT_ID = '1d0ae542-e596-00a1-b8c0-4a112a8d8c0c'
-DELIVERY_URL = "https://deliver.kenticocloud.com/#{PROJECT_ID}/items"
+DELIVERY_URL = "https://deliver.kenticocloud.com/#{PROJECT_ID}/items/"
+API_KEY = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0ZjRlZmM5N2RkMTQ0MTk0YTEyY2NjNWI5ZTAyMjk3YiIsImlhdCI6IjE1NDgwNTcxNzgiLCJleHAiOiIxODkzNjU3MTc4IiwicHJvamVjdF9pZCI6IjFkMGFlNTQyZTU5NjAwYTFiOGMwNGExMTJhOGQ4YzBjIiwidmVyIjoiMS4wLjAiLCJhdWQiOiJkZWxpdmVyLmtlbnRpY29jbG91ZC5jb20ifQ._0eVJonj7UdOCBdOxltH03gStUHBEN-Z7UhOxYa9Mas'
+
+AUTHORIZATION_HEADER =  "Bearer #{API_KEY}"
+
+HEADERS = {
+    :Authorization => "Bearer #{API_KEY}"
+}
 
 class Post
   attr_reader :id, :date, :author, :title, :content
@@ -28,11 +35,16 @@ author: #{post.author}
 #{post.content}"
 end
 
-def get_posts
-  uri = URI(DELIVERY_URL)
+def send_request
+  HTTP
+    .headers(HEADERS)
+    .get(DELIVERY_URL)
+end
 
-  response = Net::HTTP.get(uri)
+def get_posts
+  response = send_request
   parsed = JSON.parse(response)
+
   items = parsed['items']
 
   posts = []
