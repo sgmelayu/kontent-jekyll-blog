@@ -5,6 +5,8 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.4)
+    delivery_sdk_ruby (0.1.0)
+      http
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
     em-websocket (0.5.1)
@@ -43,7 +45,8 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.11.0)
       jekyll (~> 3.3)
-    jekyll-kentico (0.0.1)
+    jekyll-kentico (0.1.0)
+      delivery_sdk_ruby (~> 0.1.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-seo-tag (2.5.0)
@@ -91,13 +94,12 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  hash-joiner
-  http
-  jekyll
-  jekyll-kentico (~> 0.0.1)
-  json (~> 2.1.0)
-  minima (~> 2.0)
-  tzinfo-data
+  hash-joiner!
+  jekyll (~> 3.8.5)!
+  jekyll-kentico (~> 0.1.0)!
+  json (~> 2.1.0)!
+  minima (~> 2.0)!
+  tzinfo-data!
 
 BUNDLED WITH
    2.0.0
