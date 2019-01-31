@@ -4,6 +4,7 @@ auto: false
 project_id: ENV_PROJECT_ID
 api_key: ENV_API_KEY
 posts_dir: _posts
+baseurl: /jekyll_test
 sass:
   style: compact # possible values: nested expanded compact compressed
 collections:

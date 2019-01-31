@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.5.2)
+    addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.4)
@@ -12,14 +12,10 @@ GEM
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
-    eventmachine (1.2.7)
     eventmachine (1.2.7-x64-mingw32)
-    ffi (1.9.25)
-    ffi (1.9.25-x64-mingw32)
+    ffi (1.10.0-x64-mingw32)
     forwardable-extended (2.6.0)
-    hash-joiner (0.0.7)
-      safe_yaml
-    http (4.0.0)
+    http (4.0.3)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
       http-form_data (~> 2.0)
@@ -45,7 +41,7 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.11.0)
       jekyll (~> 3.3)
-    jekyll-kentico (0.1.0)
+    jekyll-kentico (0.1.1)
       delivery_sdk_ruby (~> 0.1.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
@@ -53,7 +49,6 @@ GEM
       jekyll (~> 3.3)
     jekyll-watch (2.1.2)
       listen (~> 3.0)
-    json (2.1.0)
     kramdown (1.17.0)
     liquid (4.0.1)
     listen (3.1.5)
@@ -74,7 +69,7 @@ GEM
     rouge (3.3.0)
     ruby_dep (1.5.0)
     safe_yaml (1.0.4)
-    sass (3.7.2)
+    sass (3.7.3)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -85,7 +80,6 @@ GEM
       tzinfo (>= 1.0.0)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.5)
     unf_ext (0.0.7.5-x64-mingw32)
 
 PLATFORMS
@@ -94,10 +88,8 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  hash-joiner!
   jekyll (~> 3.8.5)!
   jekyll-kentico (~> 0.1.0)!
-  json (~> 2.1.0)!
   minima (~> 2.0)!
   tzinfo-data!
 

@@ -7,6 +7,8 @@ before_install:
   - gem update --system
   - gem install jekyll bundler jekyll-kentico
 
+install: bundle update --jobs=3 --retry=3
+
 script: "JEKYLL_ENV=production bundle exec jekyll kentico"
 deploy:
   provider: pages
