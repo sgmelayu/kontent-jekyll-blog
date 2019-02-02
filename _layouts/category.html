@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="category">
+    {% assign elements = page.elements %}
+    {% assign system = page.system %}
+
+    <p>Name: {{ elements.name }}<p>
+    {{ elements.description }}
+    Posts
+    {% for post in site.posts %}
+        {% assign categories = post.elements.categories | map: 'id' %}
+        {% if categories contains system.id %}
+            <a href="{{ post | get_post_link | relative_url }}">{{ post.elements.title }}</a>
+        {% endif %}
+    {% endfor %}
+</div>

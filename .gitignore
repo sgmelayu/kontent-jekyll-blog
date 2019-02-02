@@ -1,5 +1,8 @@
 _site/
 _posts/
+_blog_posts/
+_categories/
+_authors/
 .sass-cache/
 
 .idea/

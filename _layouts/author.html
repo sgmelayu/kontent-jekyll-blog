@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="author">
+    {% assign elements = page.elements %}
+    {% assign system = page.system %}
+
+    <p>Name: {{ elements.name }}<p>
+    {{ elements.biography }}
+    Posts
+    {% for post in site.posts %}
+        {% assign authors = post.elements.authors | map: 'id' %}
+        {% if authors contains system.id %}
+            <a href="{{ post | get_post_link | relative_url }}">{{ post.elements.title }}</a>
+        {% endif %}
+    {% endfor %}
+</div>

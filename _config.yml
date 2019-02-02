@@ -1,12 +1,31 @@
 future: true
 name: Radek
 auto: false
-project_id: ENV_PROJECT_ID
-api_key: ENV_API_KEY
-posts_dir: _posts
 baseurl: /jekyll_test
 sass:
   style: compact # possible values: nested expanded compact compressed
 collections:
+  posts:
+    output: true
+    content_type: blog_post
+    template: post
+    page_name: PostFilenameMapper
+    linked_items:
+      authors: AuthorsMapper
+      categories: CategoriesMapper
   authors:
     output: true
+    content_type: author
+    template: author
+  categories:
+    output: true
+    content_type: category
+    template: category
+data_items:
+  blog_posts:
+    content_type: blog_post
+    linked_items:
+      authors: DataBlogPostAuthorMapper
+kentico:
+  project_id: ENV_PROJECT_ID
+  api_key: ENV_API_KEY
