@@ -2,7 +2,8 @@ PATH
   remote: C:/work/gems/jekyll-kentico
   specs:
     jekyll-kentico (0.3.0)
-      delivery-sdk-ruby
+      nokogiri (~> 1.10.0, >= 1.8.4)
+      rest-client (~> 2.1.0.rc1, >= 2.1.0.rc1)
 
 GEM
   remote: https://rubygems.org/
@@ -11,9 +12,6 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.4)
-    delivery-sdk-ruby (0.11.3)
-      nokogiri (~> 1.10.0, >= 1.8.4)
-      rest-client (~> 2.1.0.rc1, >= 2.1.0.rc1)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
     em-websocket (0.5.1)

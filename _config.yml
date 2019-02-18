@@ -35,7 +35,7 @@ data_items:
   navigation:
     content_type: root_navigation_item
     linked_items:
-      children: NavigationItemMapper
+      navigation_items: NavigationItemMapper
   blog_posts:
     content_type: blog_post
     linked_items:

@@ -1,9 +1,9 @@
-<nav>
-    {% for nav_page in site.data.kentico.navigation %}
-        <a href="{{ nav_page.url | relative_url }}"
-           {% if page.url == nav_page.url %} class="current" {% endif %}
-        >
-            {{ nav_page.title }}
-        </a>
+<div class="navbar">
+    {% for nav_page in site.data.kentico.navigation[0].elements.navigation_items %}
+        {% if nav_page.subitems %}
+            {% include nav_page_list.html content=nav_page %}
+        {% else %}
+            {% include nav_page.html content=nav_page %}
+        {% endif %}
     {% endfor %}
-</nav>
+</div>
