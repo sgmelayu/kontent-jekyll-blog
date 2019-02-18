@@ -1,36 +1,14 @@
 ---
-layout: default
-title: Blog posts from Kentico Cloud
+layout: home
+system:
+  id: 8ef068ae-891a-44e0-922f-90c7d4d381d4
+  name: Home page
+  codename: home_page
+  language: default
+  type: page
+  sitemap_locations: []
+  last_modified: '2019-02-18T08:43:44.5380689Z'
+elements:
+  title: Home
+  content: "<p><strong>This is home.</strong></p>"
 ---
-<h1>Latest Posts</h1>
-
-<ul>
-  {% for post in site.posts %}
-    {% assign elements = post.elements %}
-    <li>
-      <h2><a href="{{ post.url | relative_url }}">{{ elements.title }}</a></h2>
-      {{ elements.date | date: "%a, %b %d, %Y" }}
-      <p>
-        Estimated reading time: {{ elements.content | estimate_reading_time }}
-      </p>
-      <p>
-        Authors:
-        {% for author in elements.authors %}
-          {% assign author_page = author | linked_collection_page: 'authors' %}
-          <a href="{{ author_page.url | relative_url }}">{{ author.name }}</a>
-        {% endfor %}
-      </p>
-      <p>
-        Categories:
-        {% for category in elements.categories %}
-          {% assign category_page = category | linked_collection_page: 'categories' %}
-          <a href="{{ category_page.url | relative_url }}">{{ category.name }}</a>
-        {% endfor %}
-      </p>
-      {% if elements.image.size > 0 %}
-        <img src="{{ elements.image | first }}">
-      {% endif %}
-      <p>{{ elements.content | get_the_excerpt }}</p>
-    </li>
-  {% endfor %}
-</ul>

@@ -2,8 +2,7 @@ PATH
   remote: C:/work/gems/jekyll-kentico
   specs:
     jekyll-kentico (0.3.0)
-      nokogiri (~> 1.10.0, >= 1.8.4)
-      rest-client (~> 2.0.2, >= 2.0.2)
+      delivery-sdk-ruby
 
 GEM
   remote: https://rubygems.org/
@@ -12,6 +11,9 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.4)
+    delivery-sdk-ruby (0.11.3)
+      nokogiri (~> 1.10.0, >= 1.8.4)
+      rest-client (~> 2.1.0.rc1, >= 2.1.0.rc1)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
     em-websocket (0.5.1)
@@ -22,6 +24,7 @@ GEM
     ffi (1.10.0)
     ffi (1.10.0-x64-mingw32)
     forwardable-extended (2.6.0)
+    http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     http_parser.rb (0.6.0)
@@ -72,8 +75,9 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    rest-client (2.0.2-x64-mingw32)
+    rest-client (2.1.0.rc1-x64-mingw32)
       ffi (~> 1.9)
+      http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)

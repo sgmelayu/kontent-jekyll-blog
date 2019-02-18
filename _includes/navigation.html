@@ -1,11 +1,9 @@
 <nav>
-    {% for item in site.data.nav %}
-        <a href="{{ item.link | relative_url }}"
-        {% if page.url == item.link %}
-           class="current"
-        {% endif %}
+    {% for nav_page in site.data.kentico.navigation %}
+        <a href="{{ nav_page.url | relative_url }}"
+           {% if page.url == nav_page.url %} class="current" {% endif %}
         >
-            {{ item.name }}
+            {{ nav_page.title }}
         </a>
     {% endfor %}
 </nav>

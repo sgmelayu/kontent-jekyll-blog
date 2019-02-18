@@ -4,11 +4,21 @@ auto: false
 baseurl: /jekyll_test
 sass:
   style: compact # possible values: nested expanded compact compressed
+permalink: pretty
 collections:
+  pages:
+    output: true
+    permalink: /:path/
+    content_type: page
+    layout: default
+    layouts:
+      home_page: home
+      authors_page: authors
+      categories_page: categories
   posts:
     output: true
     content_type: blog_post
-    template: post
+    layout: post
     page_name: PostFilenameMapper
     linked_items:
       authors: AuthorsMapper
@@ -16,12 +26,16 @@ collections:
   authors:
     output: true
     content_type: author
-    template: author
+    layout: author
   categories:
     output: true
     content_type: category
-    template: category
+    layout: category
 data_items:
+  navigation:
+    content_type: root_navigation_item
+    linked_items:
+      children: NavigationItemMapper
   blog_posts:
     content_type: blog_post
     linked_items:
@@ -29,3 +43,5 @@ data_items:
 kentico:
   project_id: ENV_PROJECT_ID
   secure_key: ENV_DELIVERY_API_KEY
+  default_layout: default
+  index_page: home_page

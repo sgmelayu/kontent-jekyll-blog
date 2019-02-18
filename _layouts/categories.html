@@ -1,0 +1,19 @@
+---
+layout: default
+title: {{ page.elements.title }}
+---
+{{ page.elements.content }}
+
+<h1>List of categories</h1>
+
+<ul>
+    {% for category in site.categories %}
+    <li>
+        <h2>
+            <a href="{{ category.url | relative_url }}">
+                {{ category.elements.name }}
+            </a>
+        </h2>
+    </li>
+    {% endfor %}
+</ul>
