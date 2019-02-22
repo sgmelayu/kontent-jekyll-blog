@@ -6,12 +6,8 @@
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
 </head>
 <body>
-    {% include navigation.html %}
+    {% include taxonomy_navigation.html %}
     {% assign passed_content = content | strip_newlines %}
-    {% if passed_content == '' %}
-        {{ page.elements.content }}
-    {% else %}
-        {{ content }}
-    {% endif %}
+    {{ content }}
 </body>
 </html>

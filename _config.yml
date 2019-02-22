@@ -9,12 +9,12 @@ collections:
   pages:
     output: true
     permalink: /:path/
-    content_type: page
+    content_type: taxonomied_page
     layout: default
     layouts:
-      home_page: home
-      authors_page: authors
-      categories_page: categories
+      taxonomied_home_page: home
+      taxonomied_authors_page: authors
+      taxonomied_categories_page: categories
   posts:
     output: true
     content_type: blog_post
@@ -31,17 +31,10 @@ collections:
     output: true
     content_type: category
     layout: category
-data_items:
-  navigation:
-    content_type: root_navigation_item
-    linked_items:
-      navigation_items: NavigationItemMapper
-  blog_posts:
-    content_type: blog_post
-    linked_items:
-      authors: DataBlogPostAuthorMapper
 kentico:
   project_id: ENV_PROJECT_ID
   secure_key: ENV_DELIVERY_API_KEY
   default_layout: default
-  index_page: home_page
+  index_page: taxonomied_home_page
+  taxonomies:
+    - site

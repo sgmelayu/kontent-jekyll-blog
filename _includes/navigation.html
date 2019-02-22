@@ -1,9 +1,0 @@
-<div class="navbar">
-    {% for nav_page in site.data.kentico.navigation[0].elements.navigation_items %}
-        {% if nav_page.subitems %}
-            {% include nav_page_list.html content=nav_page %}
-        {% else %}
-            {% include nav_page.html content=nav_page %}
-        {% endif %}
-    {% endfor %}
-</div>
