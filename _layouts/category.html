@@ -9,9 +9,9 @@ layout: default
     <p>Name: {{ elements.name }}<p>
     {{ elements.description }}
     Posts
-    {% for post in site.posts %}
-        {% assign categories = post.elements.categories | map: 'id' %}
-        {% if categories contains system.id %}
+    {% for post in site.data.posts %}
+        {% assign categories = post.elements.categories | map: 'codename' %}
+        {% if categories contains system.codename %}
             <a href="{{ post | get_post_link | relative_url }}">{{ post.elements.title }}</a>
         {% endif %}
     {% endfor %}

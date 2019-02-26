@@ -1,5 +1,5 @@
-class NavigationItemMapper < Jekyll::Kentico::LinkedItemsMappers::Base
-  def map
+class NavigationItemMapper < Jekyll::Kentico::Mappers::LinkedItemsMapperFactory
+  def execute
     @linked_items.map(&method(:map_item))
   end
 private
@@ -17,8 +17,6 @@ private
 
   def resolve_sub_items(item)
     subitems = item.get_links 'subitems'
-    return unless subitems.size > 0
-
-    subitems.map(&method(:map_item))
+    subitems.map(&method(:map_item)) if subitems.size > 0
   end
 end

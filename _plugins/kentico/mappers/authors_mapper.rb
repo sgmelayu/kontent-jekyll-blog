@@ -1,8 +1,8 @@
-class AuthorsMapper < Jekyll::Kentico::LinkedItemsMappers::Base
-  def map
+class AuthorsMapper < Jekyll::Kentico::Mappers::LinkedItemsMapperFactory
+  def execute
     @linked_items.map do |author|
       {
-        id: author.system.id,
+        codename: author.system.codename,
         name: author.elements.name.value,
       }
     end

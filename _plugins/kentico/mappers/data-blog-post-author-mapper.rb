@@ -1,5 +1,5 @@
-class DataBlogPostAuthorMapper < Jekyll::Kentico::LinkedItemsMappers::Base
-  def map
+class DataBlogPostAuthorMapper < Jekyll::Kentico::Mappers::LinkedItemsMapperFactory
+  def execute
     @linked_items.map do |author|
       {
         id: author.system.id,

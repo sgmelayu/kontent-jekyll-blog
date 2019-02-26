@@ -4,37 +4,45 @@ auto: false
 baseurl: /jekyll_test
 sass:
   style: compact # possible values: nested expanded compact compressed
-permalink: pretty
-collections:
-  pages:
-    output: true
-    permalink: /:path/
-    content_type: taxonomied_page
-    layout: default
-    layouts:
-      taxonomied_home_page: home
-      taxonomied_authors_page: authors
-      taxonomied_categories_page: categories
-  posts:
-    output: true
-    content_type: blog_post
-    layout: post
-    page_name: PostFilenameMapper
-    linked_items:
-      authors: AuthorsMapper
-      categories: CategoriesMapper
-  authors:
-    output: true
-    content_type: author
-    layout: author
-  categories:
-    output: true
-    content_type: category
-    layout: category
+plugins:
+- jekyll_kentico_generator
 kentico:
   project_id: ENV_PROJECT_ID
   secure_key: ENV_DELIVERY_API_KEY
   default_layout: default
-  index_page: taxonomied_home_page
+  posts:
+    content_type: blog_post
+    layout: post
+    name: PostFilenameMapper
+    content: PageContentMapper
+    date: PostDateMapper
+    linked_items:
+      authors: AuthorsMapper
+      categories: CategoriesMapper
+  pages:
+    index: taxonomied_home_page
+    layout: default
+    content_type:
+      taxonomied_page:
+        data: PageItemMapper
+        content: PageContentMapper
+        layout: page
+        layouts:
+          taxonomied_home_page: home
+          taxonomied_authors_page: authors
+          taxonomied_categories_page: categories
+      author:
+        layout: author
+        sitemap: authors
+        collection: authors
+      category:
+        layout: category
+        sitemap: categories
+        collection: categories
+  data:
+    root_navigation_item:
+      name: navigation
+      linked_items:
+        navigation_items: NavigationItemMapper
   taxonomies:
     - site
