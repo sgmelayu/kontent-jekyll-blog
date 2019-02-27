@@ -6,7 +6,7 @@ layout: default
 <h1>List of categories</h1>
 
 <ul>
-    {% for category in site.data.categories %}
+    {% for category in site.categories %}
     <li>
         <h2>
             <a href="{{ category.url | relative_url }}">

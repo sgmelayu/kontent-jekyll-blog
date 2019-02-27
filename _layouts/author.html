@@ -9,7 +9,7 @@ layout: default
     <p>Name: {{ elements.name }}<p>
     {{ elements.biography }}
     Posts
-    {% for post in site.data.posts %}
+    {% for post in site.posts %}
         {% assign authors = post.elements.authors | map: 'codename' %}
         {% if authors contains system.codename %}
             <a href="{{ post | get_post_link | relative_url }}">{{ post.elements.title }}</a>

@@ -1,4 +1,4 @@
-class PageItemMapper < Jekyll::Kentico::Mappers::DataMapperFactory
+class PageDataMapper < Jekyll::Kentico::Mappers::DataMapperFactory
   def execute
     elements = @item.elements
 

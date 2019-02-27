@@ -7,7 +7,7 @@ layout: default
 <h1>Latest Posts</h1>
 
 <ul>
-    {% for post in site.data.posts %}
+    {% for post in site.posts %}
     {% assign elements = post.elements %}
     <li>
         <h2><a href="{{ post.url | relative_url }}">{{ elements.title }}</a></h2>

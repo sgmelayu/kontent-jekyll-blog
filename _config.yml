@@ -24,7 +24,7 @@ kentico:
     layout: default
     content_type:
       taxonomied_page:
-        data: PageItemMapper
+        data: PageDataMapper
         content: PageContentMapper
         layout: page
         layouts:
@@ -33,16 +33,12 @@ kentico:
           taxonomied_categories_page: categories
       author:
         layout: author
-        sitemap: authors
         collection: authors
       category:
         layout: category
-        sitemap: categories
         collection: categories
   data:
     root_navigation_item:
       name: navigation
-      linked_items:
-        navigation_items: NavigationItemMapper
   taxonomies:
     - site
