@@ -13,16 +13,11 @@ kentico:
   posts:
     content_type: blog_post
     layout: post
-    name: PostFilenameMapper
-    content: PageContentMapper
-    date: PostDateMapper
   pages:
     index: taxonomied_home_page
     layout: default
     content_type:
       taxonomied_page:
-        data: PageDataMapper
-        content: PageContentMapper
         layout: page
         layouts:
           taxonomied_home_page: home
