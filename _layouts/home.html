@@ -18,15 +18,15 @@ layout: default
         <p>
             Authors:
             {% for author in elements.authors %}
-            {% assign author_page = author | linked_collection_page: 'authors' %}
-            <a href="{{ author_page.url | relative_url }}">{{ author.name }}</a>
+            {% assign author_page = author.system.codename | linked_collection_page: 'authors' %}
+            <a href="{{ author_page.url | relative_url }}">{{ author.elements.name }}</a>
             {% endfor %}
         </p>
         <p>
             Categories:
             {% for category in elements.categories %}
-            {% assign category_page = category | linked_collection_page: 'categories' %}
-            <a href="{{ category_page.url | relative_url }}">{{ category.name }}</a>
+            {% assign category_page = category.system.codename | linked_collection_page: 'categories' %}
+            <a href="{{ category_page.url | relative_url }}">{{ category.elements.name }}</a>
             {% endfor %}
         </p>
         {% if elements.image.size > 0 %}

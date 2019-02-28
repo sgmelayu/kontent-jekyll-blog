@@ -1,8 +1,8 @@
 module Jekyll
   module LinkedCollectionPage
-    def linked_collection_page(linked_item, collection_name)
+    def linked_collection_page(codename, collection_name)
       collection = Jekyll.sites.first.collections[collection_name]
-      collection_items = collection&.docs&.select { |c| c['system']['codename'] == linked_item['codename'] }
+      collection_items = collection&.docs&.select { |c| c['system']['codename'] == codename }
       collection_items&.first
     end
   end

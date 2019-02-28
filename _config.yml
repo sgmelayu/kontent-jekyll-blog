@@ -16,9 +16,6 @@ kentico:
     name: PostFilenameMapper
     content: PageContentMapper
     date: PostDateMapper
-    linked_items:
-      authors: AuthorsMapper
-      categories: CategoriesMapper
   pages:
     index: taxonomied_home_page
     layout: default

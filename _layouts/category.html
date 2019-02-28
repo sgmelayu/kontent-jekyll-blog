@@ -10,7 +10,7 @@ layout: default
     {{ elements.description }}
     Posts
     {% for post in site.posts %}
-        {% assign categories = post.elements.categories | map: 'codename' %}
+        {% assign categories = post.elements.categories | map: 'system' | map: 'codename' %}
         {% if categories contains system.codename %}
             <a href="{{ post | get_post_link | relative_url }}">{{ post.elements.title }}</a>
         {% endif %}

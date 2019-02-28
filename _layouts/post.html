@@ -20,13 +20,13 @@ layout: default
     <p>
         Authors:
         {% for author in elements.authors %}
-        <a href="{{ author.codename | get_author_link | relative_url }}">{{ author.name }}</a>
+        <a href="{{ author.system.codename | get_author_link | relative_url }}">{{ author.elements.name }}</a>
         {% endfor %}
     </p>
     <p>
         Categories:
         {% for category in elements.categories %}
-        <a href="{{ category.codename | get_category_link | relative_url }}">{{ category.name }}</a>
+        <a href="{{ category.system.codename | get_category_link | relative_url }}">{{ category.elements.name }}</a>
         {% endfor %}
     </p>
     {% if elements.image.size > 0 %}
