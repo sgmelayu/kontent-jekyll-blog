@@ -8,6 +8,6 @@ source "https://rubygems.org" do
   gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
   group :jekyll_plugins do
-    gem 'jekyll_kentico_generator', '~> 0.1.0'
+    gem 'jekyll_kentico_generator', '~> 0.2.0'
   end
 end

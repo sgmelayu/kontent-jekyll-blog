@@ -10,6 +10,8 @@ kentico:
   project_id: ENV_PROJECT_ID
   secure_key: ENV_DELIVERY_API_KEY
   default_layout: default
+  content_link_resolver: ContentLinkResolver
+  inline_content_item_resolver: InlineContentItemResolver
   posts:
     content_type: blog_post
     layout: post

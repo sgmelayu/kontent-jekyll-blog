@@ -5,7 +5,7 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.4)
-    delivery-sdk-ruby (0.14.0)
+    delivery-sdk-ruby (0.14.1)
       nokogiri (~> 1.10.0, >= 1.8.4)
       rest-client (~> 2.1.0.rc1, >= 2.1.0.rc1)
     domain_name (0.5.20180417)
@@ -43,7 +43,7 @@ GEM
       jekyll (~> 3.3)
     jekyll-watch (2.1.2)
       listen (~> 3.0)
-    jekyll_kentico_generator (0.1.0)
+    jekyll_kentico_generator (0.2.0)
       delivery-sdk-ruby (~> 0.14)
     kramdown (1.17.0)
     liquid (4.0.1)
@@ -96,7 +96,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.8.5)!
-  jekyll_kentico_generator (~> 0.1.0)!
+  jekyll_kentico_generator (~> 0.2.0)!
   minima (~> 2.0)!
   tzinfo-data!
 
