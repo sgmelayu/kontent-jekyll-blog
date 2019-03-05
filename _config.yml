@@ -1,7 +1,7 @@
 future: true
 name: Radek
 auto: false
-baseurl: /jekyll_test
+baseurl: /jekyll-blog
 sass:
   style: compact # possible values: nested expanded compact compressed
 plugins:
@@ -12,6 +12,7 @@ kentico:
   default_layout: default
   content_link_resolver: ContentLinkResolver
   inline_content_item_resolver: InlineContentItemResolver
+  max_linked_items_depth: 5
   posts:
     content_type: blog_post
     layout: post
@@ -31,8 +32,5 @@ kentico:
       category:
         layout: category
         collection: categories
-  data:
-    root_navigation_item:
-      name: navigation
   taxonomies:
     - site

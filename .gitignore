@@ -1,10 +1,4 @@
-_data/kentico/
-_pages/
 _site/
-_posts/
-_blog_posts/
-_categories/
-_authors/
 .sass-cache/
 
 index.html
