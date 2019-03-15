@@ -5,7 +5,7 @@ baseurl: /jekyll-blog
 sass:
   style: compact # possible values: nested expanded compact compressed
 plugins:
-- jekyll_kentico_generator
+- jekyll-kentico
 kentico:
   project_id: ENV_PROJECT_ID
   secure_key: ENV_DELIVERY_API_KEY

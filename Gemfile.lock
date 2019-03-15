@@ -37,14 +37,14 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.11.0)
       jekyll (~> 3.3)
+    jekyll-kentico (0.3.3)
+      delivery-sdk-ruby (~> 0.16.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
     jekyll-seo-tag (2.5.0)
       jekyll (~> 3.3)
     jekyll-watch (2.1.2)
       listen (~> 3.0)
-    jekyll_kentico_generator (0.3.1)
-      delivery-sdk-ruby (~> 0.16.0)
     kramdown (1.17.0)
     liquid (4.0.3)
     listen (3.1.5)
@@ -96,7 +96,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.8.5)!
-  jekyll_kentico_generator (~> 0.3)!
+  jekyll-kentico (~> 0.3)!
   minima (~> 2.0)!
   tzinfo-data!
 
