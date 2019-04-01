@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<div class="city">
+    <p>Name: {{ page.city_name }}<p>
+    {% if page.image_url.size > 0 %}
+        <img src="{{ page.image_url }}">
+    {% endif %}
+    {{ page.description }}
+</div>

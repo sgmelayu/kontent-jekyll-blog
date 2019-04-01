@@ -10,6 +10,7 @@ kentico:
   project_id: ENV_PROJECT_ID
   secure_key: ENV_DELIVERY_API_KEY
   default_layout: default
+  content_item_resolver: ContentItemResolver
   content_link_resolver: ContentLinkResolver
   inline_content_item_resolver: InlineContentItemResolver
   max_linked_items_depth: 5
@@ -26,11 +27,15 @@ kentico:
           taxonomied_home_page: home
           taxonomied_authors_page: authors
           taxonomied_categories_page: categories
+          city_page: cities
       author:
         layout: author
         collection: authors
       category:
         layout: category
         collection: categories
+      city:
+        layout: city
+        collection: cities
   taxonomies:
     - site

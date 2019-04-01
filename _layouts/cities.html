@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{{ content }}
+
+<h1>List of cities</h1>
+
+<ul>
+    {% for city in site.cities %}
+    <li>
+        <h2>
+            <a href="{{ city.url | relative_url }}">
+                {{ city.city_name }}
+            </a>
+        </h2>
+    </li>
+    {% endfor %}
+</ul>
