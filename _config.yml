@@ -20,7 +20,7 @@ kentico:
   pages:
     index: taxonomied_home_page
     layout: default
-    content_type:
+    content_types:
       taxonomied_page:
         layout: page
         layouts:

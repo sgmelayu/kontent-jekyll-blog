@@ -6,6 +6,6 @@ class ContentLinkResolver < Jekyll::Kentico::Resolvers::ContentLinkResolver
 
 private
   def get_url(link)
-    "/#{link.code_name}" if link.type == 'taxonomied_page'
+    "#{link.code_name}" if link.type == 'taxonomied_page'
   end
 end

@@ -37,7 +37,7 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.12.1)
       jekyll (>= 3.7, < 5.0)
-    jekyll-kentico (0.4.0)
+    jekyll-kentico (0.4.1)
       delivery-sdk-ruby (~> 0.16.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
@@ -96,7 +96,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.8.5)!
-  jekyll-kentico (~> 0.3)!
+  jekyll-kentico (~> 0.4)!
   minima (~> 2.0)!
   tzinfo-data!
 
