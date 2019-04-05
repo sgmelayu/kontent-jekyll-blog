@@ -1,0 +1,2 @@
+require "./regen"
+run App
