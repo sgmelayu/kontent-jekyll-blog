@@ -5,7 +5,8 @@ class InlineContentItemResolver < Jekyll::Kentico::Resolvers::InlineContentItemR
     case type
     when 'author'
       resolve_author(item)
-    else nil
+    else
+      nil
     end
   end
 
