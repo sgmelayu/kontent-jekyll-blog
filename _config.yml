@@ -8,6 +8,8 @@ exclude:
 - regen
 - content-initializer
 - README.md
+gems:
+- jekyll-redirect-from
 plugins:
 - jekyll-kentico
 kentico:
