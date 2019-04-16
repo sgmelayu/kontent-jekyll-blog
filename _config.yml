@@ -5,43 +5,39 @@ baseurl: /jekyll-blog
 sass:
   style: compact # possible values: nested expanded compact compressed
 exclude:
-- regen
-- content-initializer
-- README.md
-gems:
-- jekyll-redirect-from
+  - regen
+  - content-initializer
+  - README.md
 plugins:
-- jekyll-kentico
+  - jekyll-kentico
+  - jekyll-redirect-from
+permalink: /:collection/:name
 kentico:
-  project_id: ENV_PROJECT_ID
-  secure_key: ENV_DELIVERY_API_KEY
-  default_layout: default
-  content_item_resolver: ContentItemResolver
+  project_id: 53c7c06c-d108-00df-f62c-5338f11c4482
+  secure_key: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwYzE2NjE5OWI2YWQ0YzFiYTQ5YWRkMGRjOTk4MDk5ZCIsImlhdCI6IjE1NTUwNjYyMjgiLCJleHAiOiIxOTAwNjY2MjI4IiwicHJvamVjdF9pZCI6IjUzYzdjMDZjZDEwODAwZGZmNjJjNTMzOGYxMWM0NDgyIiwidmVyIjoiMS4wLjAiLCJhdWQiOiJkZWxpdmVyLmtlbnRpY29jbG91ZC5jb20ifQ.PQz-3amLWjgOoGqorTdUc9gFBCutqIObqbQZiJqP71w
+  content_front_matter_resolver: ContentFrontMatterResolver
+  content_item_content_resolver: ContentItemContentResolver
+  content_item_filename_resolver: ContentItemFilenameResolver
+  content_item_data_resolver: ContentItemDataResolver
   content_link_resolver: ContentLinkResolver
   inline_content_item_resolver: InlineContentItemResolver
   max_linked_items_depth: 5
+  default_layout: default
+  languages:
+    - en-US
+    - fr-FR
   posts:
-    content_type: blog_post
+    type: blog_post
+    date: published
     layout: post
+    tags: post_tags
+    categories: post_categories
   pages:
-    index: taxonomied_home_page
-    layout: default
-    content_types:
-      taxonomied_page:
-        layout: page
-        layouts:
-          taxonomied_home_page: home
-          taxonomied_authors_page: authors
-          taxonomied_categories_page: categories
-          city_page: cities
-      author:
-        layout: author
-        collection: authors
-      category:
-        layout: category
-        collection: categories
-      city:
-        layout: city
-        collection: cities
+    home:
+    page:
+    author:
+      title: name
+      layout: author
+      collection: authors
   taxonomies:
-    - site
+    - navigation

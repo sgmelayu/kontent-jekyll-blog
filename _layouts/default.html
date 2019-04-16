@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
 </head>
 <body>
-    {% include taxonomy_navigation.html %}
+    {% include navigation.html language=page.language %}
     {% assign passed_content = content | strip_newlines %}
     {{ content }}
 </body>

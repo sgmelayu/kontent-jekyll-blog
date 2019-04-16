@@ -1,10 +1,10 @@
 class InlineContentItemResolver < Jekyll::Kentico::Resolvers::InlineContentItemResolver
-  def resolve_content_item(item)
+  def resolve_item(item)
     type = item.system.type
 
     case type
     when 'author'
-      resolve_author(item)
+      resolve_author item
     else
       nil
     end
@@ -12,6 +12,8 @@ class InlineContentItemResolver < Jekyll::Kentico::Resolvers::InlineContentItemR
 
 private
   def resolve_author(author)
-    "<h1>#{author.elements.name}</h1>"
+    elements = author.elements
+
+    "#{elements.name.value} @ #{elements.location.value}"
   end
 end

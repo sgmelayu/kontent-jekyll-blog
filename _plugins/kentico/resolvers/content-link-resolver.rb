@@ -1,11 +1,12 @@
 class ContentLinkResolver < Jekyll::Kentico::Resolvers::ContentLinkResolver
   def resolve_link(link)
-    url = get_url link
-    url && "#{@base_url}/#{url}"
+    <<~EOF
+      {% assign link_id = '#{link.id}' %}
+      {{ site.pages | where_exp: 'page', 'page.item.system.id == link_id' | map: 'url' | first | relative_url }}
+    EOF
   end
 
-private
-  def get_url(link)
-    "#{link.code_name}" if link.type == 'taxonomied_page'
+  def resolve_404(id)
+    '{{ not_found.html | relative_url }}'
   end
 end

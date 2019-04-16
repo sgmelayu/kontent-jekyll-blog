@@ -1,18 +1,13 @@
 ---
 layout: default
 ---
+{{ content }}
 
-<div class="author">
-    {% assign elements = page.elements %}
-    {% assign system = page.system %}
-
-    <p>Name: {{ elements.name }}<p>
-    {{ elements.biography }}
-    Posts
-    {% for post in site.posts %}
-        {% assign authors = post.elements.authors | map: 'system' | map: 'codename' %}
-        {% if authors contains system.codename %}
-            <a href="{{ post | get_post_link | relative_url }}">{{ post.elements.title }}</a>
+Posts
+{% for post in site.posts %}
+    {% if post.item.elements.authors.value contains page.item.system.codename %}
+        {% if post.item.system.language == page.item.system.language %}
+            <a href="{{ post.url | relative_url }}">{{ post.item.elements.title.value }}</a>
         {% endif %}
-    {% endfor %}
-</div>
+    {% endif %}
+{% endfor %}

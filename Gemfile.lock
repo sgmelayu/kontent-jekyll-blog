@@ -5,7 +5,7 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     colorator (1.1.0)
     concurrent-ruby (1.1.5)
-    delivery-sdk-ruby (0.16.0)
+    delivery-sdk-ruby (1.0.2)
       nokogiri (~> 1.10.0, >= 1.8.4)
       rest-client (~> 2.1.0.rc1, >= 2.1.0.rc1)
     domain_name (0.5.20180417)
@@ -37,8 +37,8 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.12.1)
       jekyll (>= 3.7, < 5.0)
-    jekyll-kentico (0.5.1)
-      delivery-sdk-ruby (~> 0.16.0)
+    jekyll-kentico (0.6.8)
+      delivery-sdk-ruby (~> 1.0)
     jekyll-redirect-from (0.15.0)
       jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (1.5.2)
@@ -98,10 +98,10 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.8.5)!
-  jekyll-kentico (~> 0.4)!
+  jekyll-kentico (~> 0.6)!
   jekyll-redirect-from!
   minima (~> 2.0)!
   tzinfo-data!
 
 BUNDLED WITH
-   2.0.0
+   2.0.1

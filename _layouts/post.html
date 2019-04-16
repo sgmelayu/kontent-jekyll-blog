@@ -1,36 +1,13 @@
 ---
 layout: default
 ---
-
-<div class="post">
-    <div class="post-navigation">
-        {% if page.previous.url %}
-            <a class="prev" href="{{ page.previous.url | relative_url }}">&laquo; {{page.previous.title}}</a>
-        {% endif %}
-        {% if page.next.url %}
-            <a class="next" href="{{ page.next.url | relative_url }}">{{page.next.title}} &raquo;</a>
-        {% endif %}
-    </div>
-    {% assign elements = page.elements %}
-    <h2>{{ elements.title }}</h2>
-    {{ elements.date | date: "%a, %b %d, %Y" }}
-    <p>
-        Estimated reading time: {{ elements.content | estimate_reading_time }}
-    </p>
-    <p>
-        Authors:
-        {% for author in elements.authors %}
-        <a href="{{ author.system.codename | get_author_link | relative_url }}">{{ author.elements.name }}</a>
-        {% endfor %}
-    </p>
-    <p>
-        Categories:
-        {% for category in elements.categories %}
-        <a href="{{ category.system.codename | get_category_link | relative_url }}">{{ category.elements.name }}</a>
-        {% endfor %}
-    </p>
-    {% if elements.image.size > 0 %}
-        <img src="{{ elements.image | first }}">
+<div class="post-navigation">
+    {% if page.previous.url %}
+        <a class="prev" href="{{ page.previous.url | relative_url }}">&laquo; {{page.previous.title}}</a>
     {% endif %}
-    <p>{{ elements.content }}</p>
+    {% if page.next.url %}
+        <a class="next" href="{{ page.next.url | relative_url }}">{{page.next.title}} &raquo;</a>
+    {% endif %}
 </div>
+
+{{ content }}
