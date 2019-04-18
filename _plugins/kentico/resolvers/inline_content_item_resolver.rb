@@ -1,4 +1,4 @@
-class InlineContentItemResolver < Jekyll::Kentico::Resolvers::InlineContentItemResolver
+class InlineContentItemResolver < KenticoCloud::Delivery::Resolvers::InlineContentItemResolver
   def resolve_item(item)
     type = item.system.type
 
@@ -6,14 +6,14 @@ class InlineContentItemResolver < Jekyll::Kentico::Resolvers::InlineContentItemR
     when 'author'
       resolve_author item
     else
-      nil
+      ''
     end
   end
 
-private
+  private
+
   def resolve_author(author)
     elements = author.elements
-
     "#{elements.name.value} @ #{elements.location.value}"
   end
 end

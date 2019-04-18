@@ -3,20 +3,16 @@ class ContentItemContentResolver
     type = item.system.type
 
     case type
-    when 'home'
-      resolve_home item
-    when 'page'
-      resolve_page item
-    when 'author'
-      resolve_author item
-    when 'blog_post'
-      resolve_post item
-    else
-      nil
+    when 'home' then resolve_home item
+    when 'page' then resolve_page item
+    when 'author' then resolve_author item
+    when 'blog_post' then resolve_post item
+    else 'Content is missing'
     end
   end
 
-private
+  private
+
   def get_post(post)
     id = post.system.id
     elements = post.elements
@@ -26,10 +22,10 @@ private
     categories = elements.post_categories.value.map(&:name).take(2).join(", ")
     date = elements.published.value
     thumbnail_url = elements.thumbnail.value[0].url
-    post_url = <<~EOF
+    post_url = <<~URL
       {% assign post_id = '#{id}' %}
       {{ site.posts | where_exp: 'post', 'post.item.system.id == post_id' | map: 'url' | first | relative_url }}"
-    EOF
+    URL
 
     <<~EOF
       <div class="home__author">

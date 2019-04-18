@@ -3,7 +3,7 @@
 
 <div class="navbar">
     {% for item in site.data.nav %}
-        {% assign language_prefixed_url = item.url | prefix_with_language: page_langauge %}
+        {% assign language_prefixed_url = item.url | prefix_with_language: page_language %}
         {% assign nav_page_url = language_prefixed_url | relative_url %}
 
         {% assign should_highlight_url = page.url | should_be_highlighted: language_prefixed_url %}

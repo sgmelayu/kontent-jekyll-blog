@@ -1,12 +1,12 @@
-class ContentLinkResolver < Jekyll::Kentico::Resolvers::ContentLinkResolver
+class ContentLinkResolver < KenticoCloud::Delivery::Resolvers::ContentLinkResolver
   def resolve_link(link)
-    <<~EOF
+    <<~LINK
       {% assign link_id = '#{link.id}' %}
       {{ site.pages | where_exp: 'page', 'page.item.system.id == link_id' | map: 'url' | first | relative_url }}
-    EOF
+    LINK
   end
 
-  def resolve_404(id)
+  def resolve_404(_id)
     '{{ not_found.html | relative_url }}'
   end
 end
