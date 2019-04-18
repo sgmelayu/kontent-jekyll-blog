@@ -39,7 +39,7 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.12.1)
       jekyll (>= 3.7, < 5.0)
-    jekyll-kentico (0.6.8)
+    jekyll-kentico (0.6.9)
       delivery-sdk-ruby (~> 1.0)
     jekyll-redirect-from (0.15.0)
       jekyll (>= 3.3, < 5.0)
