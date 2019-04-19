@@ -15,10 +15,10 @@ permalink: /:collection/:name
 kentico:
   project_id: 53c7c06c-d108-00df-f62c-5338f11c4482
   secure_key: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwYzE2NjE5OWI2YWQ0YzFiYTQ5YWRkMGRjOTk4MDk5ZCIsImlhdCI6IjE1NTUwNjYyMjgiLCJleHAiOiIxOTAwNjY2MjI4IiwicHJvamVjdF9pZCI6IjUzYzdjMDZjZDEwODAwZGZmNjJjNTMzOGYxMWM0NDgyIiwidmVyIjoiMS4wLjAiLCJhdWQiOiJkZWxpdmVyLmtlbnRpY29jbG91ZC5jb20ifQ.PQz-3amLWjgOoGqorTdUc9gFBCutqIObqbQZiJqP71w
-  content_front_matter_resolver: ContentFrontMatterResolver
-  content_item_content_resolver: ContentItemContentResolver
-  content_item_filename_resolver: ContentItemFilenameResolver
-  content_item_data_resolver: ContentItemDataResolver
+  front_matter_resolver: FrontMatterResolver
+  content_resolver: ContentResolver
+  filename_resolver: FilenameResolver
+  data_resolver: DataResolver
   content_link_resolver: ContentLinkResolver
   inline_content_item_resolver: InlineContentItemResolver
   max_linked_items_depth: 5

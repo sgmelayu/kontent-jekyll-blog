@@ -1,5 +1,5 @@
-class ContentFrontMatterResolver
-  def resolve(content_item, _content_type)
+class FrontMatterResolver
+  def resolve(content_item, _page_type)
     @item = content_item
 
     {

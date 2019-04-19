@@ -1,5 +1,5 @@
-class ContentItemFilenameResolver
-  def resolve_filename(item)
+class FilenameResolver
+  def resolve(item)
     url_slug = get_url_slug(item)
     "#{url_slug.value}-#{item.system.language}"
   end

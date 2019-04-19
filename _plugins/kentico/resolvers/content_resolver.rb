@@ -1,12 +1,12 @@
-class ContentItemContentResolver
-  def resolve_content(item)
+class ContentResolver
+  def resolve(item)
     type = item.system.type
 
     case type
-    when 'home' then resolve_home item
-    when 'page' then resolve_page item
-    when 'author' then resolve_author item
-    when 'blog_post' then resolve_post item
+    when 'home' then resolve_home(item)
+    when 'page' then resolve_page(item)
+    when 'author' then resolve_author(item)
+    when 'blog_post' then resolve_post(item)
     else 'Content is missing'
     end
   end

@@ -1,14 +1,14 @@
-class ContentItemDataResolver
+class DataResolver
   def initialize
     @depth = 0
   end
 
-  def resolve_item(item)
-    resolve_item_internal(item, 0)
+  def resolve(item)
+    resolve_internal(item, 0)
   end
 
 private
-  def resolve_item_internal(item, depth)
+  def resolve_internal(item, depth)
     @depth = depth
 
     OpenStruct.new(
@@ -37,7 +37,7 @@ private
     when Jekyll::Kentico::Constants::ItemElementType::LINKED_ITEMS
       return [] if @depth > 4
 
-      item.get_links(codename.to_s).map { |linked_item| resolve_item_internal(linked_item, @depth + 1) }
+      item.get_links(codename.to_s).map { |linked_item| resolve_internal(linked_item, @depth + 1) }
     else
       element.value
     end
