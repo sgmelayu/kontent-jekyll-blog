@@ -1,9 +1,3 @@
-PATH
-  remote: C:/Users/Radek/Downloads/Diplomka/gems/jekyll-kentico
-  specs:
-    jekyll-kentico (0.8.0)
-      delivery-sdk-ruby (~> 1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -43,6 +37,8 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.12.1)
       jekyll (>= 3.7, < 5.0)
+    jekyll-kentico (0.8.0)
+      delivery-sdk-ruby (~> 1.0)
     jekyll-redirect-from (0.15.0)
       jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (1.5.2)
@@ -102,7 +98,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.8.5)!
-  jekyll-kentico (~> 0.7)!
+  jekyll-kentico (~> 0.8)!
   jekyll-redirect-from!
   minima (~> 2.0)!
   tzinfo-data!

@@ -29,7 +29,6 @@ kentico:
   posts:
     type: blog_post
     date: published
-    layout: post
     tags: post_tags
     categories: post_categories
   pages:
@@ -37,7 +36,8 @@ kentico:
     page:
     author:
       title: name
-      layout: author
       collection: authors
   taxonomies:
    - sitemap
+   - post_categories
+   - post_tags

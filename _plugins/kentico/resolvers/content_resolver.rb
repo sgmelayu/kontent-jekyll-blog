@@ -122,6 +122,18 @@ class ContentResolver
         <p>Birthdate: #{stringify_date elements.date_of_birth.value}</p>
         <div>#{author.get_string 'biography'}</div>
       </div>
+
+      <h3>Posts</h3>
+
+      <ul>
+      {% for post in site.posts %}
+          {% if post.item.elements.authors.value contains page.item.system.codename %}
+              {% if post.item.system.language == page.item.system.language %}
+                  <li><a href="{{ post.url | relative_url }}">{{ post.item.elements.title.value }}</a></li>
+              {% endif %}
+          {% endif %}
+      {% endfor %}
+      </ul>
     EOF
   end
 
@@ -137,24 +149,33 @@ class ContentResolver
     EOF
   end
 
-  def get_category_link(category)
-    category_url = "{{ 'categories/#{category.codename}' | relative_url }}"
+  def get_category_link(category, language)
+    category_url = "{{ '#{language}/categories/#{category.codename}' | relative_url }}"
     %{<a href="#{category_url}">#{category.name}</a>}
   end
 
-  def get_tag_link(tag)
-    tag_url = "{{ 'tags/#{tag.codename}' | relative_url }}"
+  def get_tag_link(tag, language)
+    tag_url = "{{ '#{language}/tags/#{tag.codename}' | relative_url }}"
     %{<a href="#{tag_url}">#{tag.name}</a>}
   end
 
   def resolve_post(post)
     elements = post.elements
+    language = post.system.language
     authors = post.get_links('authors').map(&method(:get_author_link)).join("\n")
-    categories = elements.post_categories.value.map(&method(:get_category_link)).join("\n")
-    tags = elements.post_tags.value.map(&method(:get_tag_link)).join("\n")
+    categories = elements.post_categories.value.map{ |category| get_category_link(category, language) }.join("\n")
+    tags = elements.post_tags.value.map{ |tag| get_tag_link(tag, language) }.join("\n")
 
     <<~EOF
-      <h2>#{elements.title.value}</h2>
+      <div class="post-navigation">
+        {% if page.previous.url %}
+            <a class="prev" href="{{ page.previous.url | relative_url }}">&laquo; {{page.previous.title}}</a>
+        {% endif %}
+        {% if page.next.url %}
+            <a class="next" href="{{ page.next.url | relative_url }}">{{page.next.title}} &raquo;</a>
+        {% endif %}
+      </div>
+
       #{Date.parse(elements.published.value).strftime("%a, %b %d, %Y")}
       <p>Estimated reading time: #{estimate_reading_time(post.get_string 'content')}</p>
       <p>
