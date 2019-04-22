@@ -4,3 +4,8 @@
   url: /authors
 - name: Posts
   url: /posts
+  subitems:
+    - name: Tags
+      url: /tags
+    - name: Categories
+      url: /categories

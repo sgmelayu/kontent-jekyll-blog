@@ -7,11 +7,45 @@
         {% assign nav_page_url = language_prefixed_url | relative_url %}
 
         {% assign should_highlight_url = page.url | should_be_highlighted: language_prefixed_url %}
-        <a href="{{ nav_page_url }}"
-           {% if should_highlight_url %} class="current" {% endif %}
-        >
-            {{ item.name }}
-        </a>
+
+        {% if item.subitems %}
+            <div class="dropdown">
+                <form>
+                    <button
+                        {% if should_highlight_url %}
+                            class="dropbtn current"
+                        {% else %}
+                            class="dropbtn"
+                        {% endif %}
+                        formaction="{{ nav_page_url }}"
+                    >
+                        {{ item.name }}
+                        <i class="fa fa-carret-down"></i>
+                    </button>
+                </form>
+
+                <div class="dropdown-content">
+                    {% for subitem in item.subitems %}
+                        {% assign language_prefixed_url = subitem.url | prefix_with_language: page_language %}
+                        {% assign nav_page_url = language_prefixed_url | relative_url %}
+
+                        {% assign should_highlight_url = page.url | should_be_highlighted: language_prefixed_url %}
+
+                        <a href="{{ nav_page_url }}"
+                           {% if should_highlight_url %} class="current" {% endif %}
+                        >
+                            {{ subitem.name }}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        {% else %}
+            <a href="{{ nav_page_url }}"
+               {% if should_highlight_url %} class="current" {% endif %}
+            >
+                {{ item.name }}
+            </a>
+        {% endif %}
     {% endfor %}
 
     {% assign other_language = page_language | get_other_language %}
