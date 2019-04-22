@@ -39,7 +39,7 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.12.1)
       jekyll (>= 3.7, < 5.0)
-    jekyll-kentico (0.7.1)
+    jekyll-kentico (0.8.0)
       delivery-sdk-ruby (~> 1.0)
     jekyll-redirect-from (0.15.0)
       jekyll (>= 3.3, < 5.0)
@@ -65,9 +65,9 @@ GEM
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
     netrc (0.11.0)
-    nokogiri (1.10.2)
+    nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
-    nokogiri (1.10.2-x64-mingw32)
+    nokogiri (1.10.3-x64-mingw32)
       mini_portile2 (~> 2.4.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -100,8 +100,7 @@ GEM
       tzinfo (>= 1.0.0)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.5)
-    unf_ext (0.0.7.5-x64-mingw32)
+    unf_ext (0.0.7.6)
 
 PLATFORMS
   ruby
@@ -109,7 +108,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 3.8.5)!
-  jekyll-kentico (~> 0.7)!
+  jekyll-kentico (~> 0.8)!
   jekyll-redirect-from!
   minima (~> 2.0)!
   tzinfo-data!
