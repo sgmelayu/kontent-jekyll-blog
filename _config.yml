@@ -6,7 +6,8 @@ sass:
   style: compact # possible values: nested expanded compact compressed
 exclude:
   - regen
-  - content-initializer
+  - sample-content
+  - initialize-content.rb
   - README.md
 plugins:
   - jekyll-kentico
