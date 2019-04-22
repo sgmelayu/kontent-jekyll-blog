@@ -2,3 +2,5 @@
   url:
 - name: Authors
   url: /authors
+- name: Posts
+  url: /posts

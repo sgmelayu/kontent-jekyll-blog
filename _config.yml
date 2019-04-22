@@ -21,11 +21,11 @@ kentico:
   data_resolver: DataResolver
   content_link_resolver: ContentLinkResolver
   inline_content_item_resolver: InlineContentItemResolver
+  custom_site_processor: CustomSiteProcessor
   max_linked_items_depth: 5
   default_layout: default
   languages:
     - en-US
-    - fr-FR
   posts:
     type: blog_post
     date: published
@@ -40,4 +40,4 @@ kentico:
       layout: author
       collection: authors
   taxonomies:
-    - navigation
+   - sitemap
