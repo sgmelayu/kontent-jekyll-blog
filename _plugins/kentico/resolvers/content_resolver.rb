@@ -150,12 +150,12 @@ class ContentResolver
   end
 
   def get_category_link(category, language)
-    category_url = "{{ '#{language}/categories/#{category.codename}' | relative_url }}"
+    category_url = "{{ '#{language}/posts/categories/#{category.codename}' | relative_url }}"
     %{<a href="#{category_url}">#{category.name}</a>}
   end
 
   def get_tag_link(tag, language)
-    tag_url = "{{ '#{language}/tags/#{tag.codename}' | relative_url }}"
+    tag_url = "{{ '#{language}/posts/tags/#{tag.codename}' | relative_url }}"
     %{<a href="#{tag_url}">#{tag.name}</a>}
   end
 

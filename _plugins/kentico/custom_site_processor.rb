@@ -98,23 +98,24 @@ class CustomSiteProcessor
       tags_data = {
         'title' => 'Tags',
         'layout' => 'default',
-        'permalink' => "/#{language}/tags"
+        'permalink' => "/#{language}/posts/tags"
       }
+      tags_dir = 'posts'
       tags_content = <<~TAGS_CONTENT
         <ul>
         #{tags.map{ |tag| get_tag_link(tag, language) }.join("\n")}
         </ul>
       TAGS_CONTENT
 
-      @site.pages << Page.new(@site, tags_content, tags_data, tags_name)
+      @site.pages << Page.new(@site, tags_content, tags_data, tags_name, dir: tags_dir)
 
       tags.each do |tag|
         name = "#{tag.codename}-#{language}.html"
-        dir = 'tags'
+        dir = 'posts/tags'
         data = {
           'title' => "#{tag.name}",
           'layout' => 'default',
-          'permalink' => "#{language}/tags/#{tag.codename}"
+          'permalink' => "#{language}/posts/tags/#{tag.codename}"
         }
         content = <<~CONTENT
           {% assign language = '#{language}' %}
@@ -136,7 +137,7 @@ class CustomSiteProcessor
   def get_category_link(category, language)
     <<~LINK
       {% assign category = '#{category.codename}' %}
-      <li><a href="{{ '#{language}/categories/' | append: category | relative_url }}">#{category.name}</a></li>
+      <li><a href="{{ '#{language}/posts/categories/' | append: category | relative_url }}">#{category.name}</a></li>
     LINK
   end
 
@@ -148,8 +149,9 @@ class CustomSiteProcessor
       categories_data = {
         'title' => 'Categories',
         'layout' => 'default',
-        'permalink' => "/#{language}/categories"
+        'permalink' => "/#{language}/posts/categories"
       }
+      categories_dir = 'posts'
       categories_content = <<~CATEGORIES_CONTENT
         <ul>
         #{categories.map{ |category| get_category_link(category, language) }.join("\n")}
@@ -160,11 +162,11 @@ class CustomSiteProcessor
 
       categories.each do |category|
         name = "#{category.codename}-#{language}.html"
-        dir = 'categories'
+        dir = 'posts/categories'
         data = {
           'title' => "#{category.name}",
           'layout' => 'default',
-          'permalink' => "#{language}/categories/#{category.codename}"
+          'permalink' => "#{language}/posts/categories/#{category.codename}"
         }
         content = <<~CONTENT
           {% assign language = '#{language}' %}
