@@ -9,3 +9,5 @@
       url: /tags
     - name: Categories
       url: /categories
+- name: About us
+  url: /about-us
