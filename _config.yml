@@ -13,8 +13,8 @@ plugins:
   - jekyll-redirect-from
 permalink: /:collection/:name
 kentico:
-  project_id: 53c7c06c-d108-00df-f62c-5338f11c4482
-  secure_key: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwYzE2NjE5OWI2YWQ0YzFiYTQ5YWRkMGRjOTk4MDk5ZCIsImlhdCI6IjE1NTUwNjYyMjgiLCJleHAiOiIxOTAwNjY2MjI4IiwicHJvamVjdF9pZCI6IjUzYzdjMDZjZDEwODAwZGZmNjJjNTMzOGYxMWM0NDgyIiwidmVyIjoiMS4wLjAiLCJhdWQiOiJkZWxpdmVyLmtlbnRpY29jbG91ZC5jb20ifQ.PQz-3amLWjgOoGqorTdUc9gFBCutqIObqbQZiJqP71w
+  project_id: ENV_PROJECT_ID
+  secure_key: ENV_DELIVERY_API_KEY
   front_matter_resolver: FrontMatterResolver
   content_resolver: ContentResolver
   filename_resolver: FilenameResolver
