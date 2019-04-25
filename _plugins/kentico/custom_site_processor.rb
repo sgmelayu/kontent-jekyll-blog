@@ -24,7 +24,7 @@ class Page < Jekyll::Page
 end
 
 class CustomSiteProcessor
-  LANGUAGES = ['en-US']
+  LANGUAGES = ['default']
 
   def generate(site, kentico_data)
     @site = site

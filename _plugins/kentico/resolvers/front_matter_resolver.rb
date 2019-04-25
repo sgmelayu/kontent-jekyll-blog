@@ -12,7 +12,7 @@ class FrontMatterResolver
   private
 
   def redirect_from
-    [''] if type == 'home' && language == 'en-US'
+    [''] if type == 'home' && language == 'default'
   end
 
   def type
