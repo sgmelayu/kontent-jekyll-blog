@@ -157,7 +157,7 @@ module SampleContent
             type: ItemElementType::DATE_TIME
           },
           {
-            name: 'Biography',
+            name: 'About',
             type: ItemElementType::TEXT
           },
           {
@@ -201,6 +201,10 @@ module SampleContent
             type: ItemElementType::RICH_TEXT
           },
           {
+            name: 'Short description',
+            type: ItemElementType::TEXT
+          },
+          {
             type: ItemElementType::TAXONOMY,
             taxonomy_group: {
               codename: @post_categories_taxonomy.codename
@@ -227,7 +231,7 @@ module SampleContent
       @home_type = creator.create_type(home)
     end
 
-    def create_author(name, location, date_of_birth, biography, avatar_url)
+    def create_author(name, location, date_of_birth, about, avatar_url)
       avatar_url =~ /\/([^\/]*)\/([^\/]*)\.[^\/]*$/
       avatar_name = "#{$1}#{$2}"
       avatar_reference = creator.upload_file_from_url(avatar_url, avatar_name)
@@ -273,8 +277,8 @@ module SampleContent
             value: date_of_birth
           },
           {
-            element: { codename: 'biography' },
-            value: biography
+            element: { codename: 'about' },
+            value: about
           },
           {
             element: { codename: 'sitemap' },
@@ -326,7 +330,7 @@ module SampleContent
       { id: term.id }
     end
 
-    def create_post(title, published, thumbnail_url, authors, content, post_categories, post_tags)
+    def create_post(title, published, thumbnail_url, authors, content, short_description, post_categories, post_tags)
       thumbnail_url =~ /\/([^\/]*)(\.[^\/]*)?$/
       thumbnail_name = $1
       thumbnail_reference = creator.upload_file_from_url(thumbnail_url, thumbnail_name)
@@ -374,6 +378,10 @@ module SampleContent
           {
             element: { codename: 'content' },
             value: content
+          },
+          {
+            element: { codename: 'short_description' },
+            value: short_description,
           },
           {
             element: { codename: 'post_categories' },
@@ -496,7 +504,8 @@ module SampleContent
         DateTime.parse('2019-07-17').iso8601,
         'https://picsum.photos/id/237/500/300',
         [@author1],
-        "<h2>A Habitant Pharetra Phasellus Urna Facilisis</h2>\n<h3>Erat Placerat Scelerisque Justo Quam Facilisi</h3>\n<p>Platea praesent. Justo arcu varius nostra est platea lacinia feugiat. Nullam euismod Dictum pretium dictum Sem tellus vitae bibendum. Ullamcorper&nbsp;<em>hendrerit</em>integer condimentum netus neque mauris.</p>\n<p>Platea mus parturient habitasse suscipit rutrum elit magnis aenean et dictum sed&nbsp;<em>auctor</em>&nbsp;vivamus pellentesque cubilia elementum rutrum eu nisi tincidunt, fermentum dapibus montes, urna. Turpis sollicitudin placerat tortor vestibulum pellentesque ante mollis facilisis scelerisque mauris. Sociosqu consequat imperdiet sociis erat elementum&nbsp;<em>imperdiet</em>&nbsp;platea lacus odio netus.</p>\n<p>Donec mollis. Cras hac aenean torquent. Etiam ullamcorper posuere sagittis eu Scelerisque cras. Curae; pulvinar rutrum dapibus mauris sagittis justo odio hac&nbsp;<strong>proin</strong>&nbsp;class sit placerat odio.</p>",
+        "<h2>A Habitan Pharetra Phasellus Urna Facilisis</h2>\n<h3>Erat Placerat Scelerisque Justo Quam Facilisi</h3>\n<p>Platea praesent. Justo arcu varius nostra est platea lacinia feugiat. Nullam euismod Dictum pretium dictum Sem tellus vitae bibendum. Ullamcorper&nbsp;<em>hendrerit</em>integer condimentum netus neque mauris.</p>\n<p>Platea mus parturient habitasse suscipit rutrum elit magnis aenean et dictum sed&nbsp;<em>auctor</em>&nbsp;vivamus pellentesque cubilia elementum rutrum eu nisi tincidunt, fermentum dapibus montes, urna. Turpis sollicitudin placerat tortor vestibulum pellentesque ante mollis facilisis scelerisque mauris. Sociosqu consequat imperdiet sociis erat elementum&nbsp;<em>imperdiet</em>&nbsp;platea lacus odio netus.</p>\n<p>Donec mollis. Cras hac aenean torquent. Etiam ullamcorper posuere sagittis eu Scelerisque cras. Curae; pulvinar rutrum dapibus mauris sagittis justo odio hac&nbsp;<strong>proin</strong>&nbsp;class sit placerat odio.</p>",
+        'Platea praesent. Justo arcu varius nostra est platea lacinia feugiat. Nullam euismod Dictum pretium dictum Sem tellus vitae bibendum. Ullamcorper hendreritinteger condimentum netus neque mauris.',
         [
           get_taxonomy_reference(@post_categories_taxonomy, 'Magna et')
         ],
@@ -511,6 +520,7 @@ module SampleContent
         'https://picsum.photos/id/239/500/300',
         [@author5, @author3],
         "<h2>Aptent</h2>\n<p>Nascetur tempus. Vivamus vel vestibulum ligula quam hendrerit integer facilisi molestie. Senectus duis ultricies placerat id magna tincidunt&nbsp;<em>elementum</em>&nbsp;habitasse elit nunc vitae. Nec. Blandit dapibus suscipit. Eu per enim. Nibh lacinia mauris. Torquent litora quis. Ridiculus justo.</p>\n<p>Dui iaculis tortor massa quisque scelerisque vivamus faucibus. Class imperdiet mauris purus suspendisse eget class. Nullam consectetuer feugiat nullam dapibus vel enim eleifend placerat amet parturient. Id nibh tincidunt litora.</p>\n<h3>Justo Fermentum Litora</h3>\n<p>Aenean vulputate arcu adipiscing et non metus. Dictumst orci&nbsp;<strong>mus</strong>&nbsp;volutpat lacinia porttitor&nbsp;<em>ac</em>&nbsp;class ac egestas sodales habitasse luctus praesent vestibulum. Euismod enim felis auctor, urna curae; malesuada bibendum aenean. Erat.</p>",
+        'Nascetur tempus. Vivamus vel vestibulum ligula quam hendrerit integer facilisi molestie. Senectus duis ultricies placerat id magna tincidunt elementum habitasse elit nunc vitae. Nec. Blandit dapibus suscipit. Eu per enim. Nibh lacinia mauris. Torquent litora quis. Ridiculus justo.',
         [
           get_taxonomy_reference(@post_categories_taxonomy, 'Facilisi delenit'),
           get_taxonomy_reference(@post_categories_taxonomy, 'Sed amet')
@@ -527,6 +537,7 @@ module SampleContent
         'https://picsum.photos/id/685/500/300',
         [@author1],
         "<h2>Facilisi</h2>\n<h3>Enim Per Eros Natoque Proin Fames Libero Habitant</h3>\n<p>Habitasse non scelerisque neque class aenean purus egestas duis bibendum commodo Fringilla ante suspendisse magna tincidunt. Platea pharetra Facilisi suscipit Habitant. Per Ipsum quisque proin accumsan sollicitudin ultricies. Fames. Ante ad enim ac viverra eros ut maecenas scelerisque aptent class, venenatis iaculis&nbsp;<strong>convallis</strong>&nbsp;sociosqu commodo.</p>\n<p>Litora torquent class blandit per sociis leo nibh integer odio. Pede sit sodales sagittis netus. Primis donec aliquet. Dictum hendrerit lorem purus vitae habitasse volutpat. Rutrum id nisi&nbsp;<em>ipsum</em>&nbsp;sollicitudin tempus ligula facilisis sociis at.</p>\n<p>Arcu auctor volutpat dolor vivamus. Elementum sociosqu. Malesuada&nbsp;<strong>ad</strong>&nbsp;leo purus, vestibulum. Blandit. Morbi eget ad curabitur diam in lectus.</p>",
+        'Habitasse non scelerisque neque class aenean purus egestas duis bibendum commodo Fringilla ante suspendisse magna tincidunt. Platea pharetra Facilisi suscipit Habitant. Per Ipsum quisque proin accumsan sollicitudin ultricies.',
         [
           get_taxonomy_reference(@post_categories_taxonomy, 'Facilisi delenit')
         ],
@@ -542,6 +553,7 @@ module SampleContent
         'https://picsum.photos/id/367/500/300',
         [@author2],
         "<h2>Morbi Ad Ipsum</h2>\n<p>At elementum vestibulum sapien netus hac semper egestas. Nam nulla&nbsp;<em>faucibus</em>etiam, senectus eros etiam urna luctus curabitur erat rhoncus posuere duis eu faucibus tristique volutpat erat&nbsp;<em>odio</em>&nbsp;senectus.</p>\n<p>Sociosqu suscipit ultrices aptent, metus nullam cum libero, curae; ad magnis aliquet molestie nibh curabitur, ad nisi vestibulum semper nulla. Pellentesque libero egestas, bibendum purus cum aenean nibh tristique at feugiat netus. Conubia faucibus. Nascetur platea placerat per&nbsp;<strong>tortor</strong>&nbsp;nonummy.</p>\n<h3>Parturient Vel</h3>\n<p>Rhoncus eros sapien. Lacus mus nonummy mollis etiam aenean pede consectetuer laoreet erat eros sollicitudin sollicitudin adipiscing est pellentesque. Penatibus. Consectetuer iaculis cras massa eros vulputate neque leo habitasse neque nullam.</p>",
+        'At elementum vestibulum sapien netus hac semper egestas. Nam nulla faucibusetiam, senectus eros etiam urna luctus curabitur erat rhoncus posuere duis eu faucibus tristique volutpat erat odio senectus.',
         [
           get_taxonomy_reference(@post_categories_taxonomy, 'Magna et'),
           get_taxonomy_reference(@post_categories_taxonomy, 'Sed amet')
@@ -558,6 +570,7 @@ module SampleContent
         'https://picsum.photos/id/588/500/300',
         [@author4, @author5],
         "<h2>Parturient Convallis Nisi Rhoncus Urna</h2>\n<h3>Posuere Senectus</h3>\n<p>Nascetur cum ullamcorper lorem suspendisse per risus. Nulla pulvinar nulla penatibus&nbsp;<strong>maecenas</strong>&nbsp;per tristique cras molestie dignissim venenatis nullam Inceptos viverra aliquet varius senectus. In vitae at proin.</p>\n<h3>Quisque Pretium Fames Neque Aliquam Inceptos</h3>\n<p>Risus aenean&nbsp;<em>quam</em>&nbsp;orci augue sed. Duis mauris sem integer ultrices. Nec ut ad lorem dis varius libero iaculis lacinia laoreet odio pulvinar venenatis curabitur elementum varius nec purus.&nbsp;<em>Pharetra</em>&nbsp;fusce mauris.</p>\n<p>Id convallis ut fermentum mollis convallis ac massa enim.&nbsp;<em>Curabitur</em>&nbsp;rhoncus egestas turpis lacus. Potenti congue venenatis. Est vivamus inceptos a bibendum a felis placerat vehicula pulvinar ornare magnis malesuada curabitur pretium nunc. Semper erat scelerisque facilisi. Malesuada faucibus cras.</p>",
+        'Nascetur cum ullamcorper lorem suspendisse per risus. Nulla pulvinar nulla penatibus maecenas per tristique cras molestie dignissim venenatis nullam Inceptos viverra aliquet varius senectus. In vitae at proin.',
         [
           get_taxonomy_reference(@post_categories_taxonomy, 'Sed amet')
         ],
@@ -573,6 +586,7 @@ module SampleContent
         'https://picsum.photos/id/777/500/300',
         [@author1],
         "<h2>Tempor Luctus Imperdiet Massa Id Et</h2>\n<h3>Ullamcorper Aliquet Posuere Lorem</h3>\n<p><em>Pede</em>&nbsp;mi quam parturient libero lacinia auctor magnis nunc vestibulum euismod imperdiet morbi praesent tristique Ullamcorper posuere&nbsp;<em>quis</em>&nbsp;tempus ipsum dolor dapibus morbi a nullam scelerisque nostra mi eget fames quam magna justo.</p>\n<p>Fermentum magna duis pharetra morbi aenean condimentum mus arcu&nbsp;<em>vel</em>vivamus lacus amet torquent dictum vivamus dolor Vivamus. Cursus&nbsp;<strong>ut</strong>&nbsp;turpis dictum nam Ac vitae. Sapien erat vehicula dictumst bibendum. Nonummy turpis mus.</p>\n<h3>A Consequat Malesuada</h3>\n<p>Dapibus vulputate, euismod&nbsp;<em>cubilia</em>&nbsp;feugiat condimentum&nbsp;<strong>orci</strong>&nbsp;lacus&nbsp;<em>id</em>&nbsp;parturient porta tincidunt pharetra interdum tempor. Volutpat ultrices accumsan sagittis torquent suscipit per, aliquet hendrerit mattis dui. Luctus ut adipiscing rutrum. Interdum sapien a facilisis.</p>",
+        'Pede mi quam parturient libero lacinia auctor magnis nunc vestibulum euismod imperdiet morbi praesent tristique Ullamcorper posuere quis tempus ipsum dolor dapibus morbi a nullam scelerisque nostra mi eget fames quam magna justo.',
         [
           get_taxonomy_reference(@post_categories_taxonomy, 'Facilisi delenit'),
           get_taxonomy_reference(@post_categories_taxonomy, 'Magna et')

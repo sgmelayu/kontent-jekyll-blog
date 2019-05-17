@@ -1,0 +1,82 @@
+.author {
+  position: relative;
+  margin: 2em 0 0;
+  padding: 2em 0;
+  z-index: 10;
+  border-top: 1px solid $color-gray-90;
+  border-bottom: 1px solid $color-gray-90;
+  clear: both;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.author-avatar {
+  position: relative;
+  float: left;
+  width: 5em;
+  height: 5em;
+  margin: -0.5em 0 0 1.5em;
+  overflow: hidden;
+  border-radius: 10em;
+  box-sizing: border-box;
+
+  img {
+    width: 100%;
+    margin: auto;
+    border-radius: 10em;
+    box-sizing: border-box;
+  }
+
+  @media only screen and (max-width: 480px) {
+    width: 4em;
+    height: 4em;
+    margin: 0 1em 1em 0;
+  }
+}
+
+.author-bio {
+  padding-left: 10em;
+  font-size: 0.75em;
+  line-height: 1.334em;
+
+  span {
+    position: relative;
+    font-size: 0.8em;
+    display: inline-block;
+    margin-top: 1.25em;
+    margin-right: 1.25em;
+    font-weight: 400;
+    opacity: 0.75;
+  }
+
+  i {
+    color: inherit;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: inherit;
+    border-bottom: 1px solid transparent;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+
+  @media only screen and (max-width: 480px) {
+    padding-left: 0;
+  }
+}
+
+.author-name {
+  margin: 0;
+  padding: 0;
+  font-size: 1.334em;
+  line-height: 1em;
+  text-indent: inherit;
+}
+
+.author-about {
+  margin: 0.667em 0 0.334em;
+}

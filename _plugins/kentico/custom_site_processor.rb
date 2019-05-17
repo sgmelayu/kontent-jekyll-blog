@@ -50,12 +50,12 @@ class CustomSiteProcessor
       content = <<~CONTENT
         {% assign language = '#{language}' %}
         {% assign authors = site.authors | where_exp: 'author', 'author.item.system.language == language' %}
-        
-        <ul>
-            {% for author in authors %}
-                <li><a href="{{ author.url | relative_url }}">{{ author.item.elements.name.value }}</a></li>
-            {% endfor %}
-        </ul>
+
+        <div class="page-content">
+        {% for author in authors %}
+          {% include author.html author=author %}
+        {% endfor %}
+        </div>
       CONTENT
       @site.pages << Page.new(@site, content, data, name)
     end
@@ -70,14 +70,16 @@ class CustomSiteProcessor
         'permalink' => "/#{language}/posts"
       }
       content = <<~CONTENT
-        {% assign language = '#{language}' %}
-        {% assign posts = site.posts | where_exp: 'post', 'post.item.system.language == language' %}
-        
-        <ul>
-            {% for post in posts %}
-                <li><a href="{{ post.url | relative_url }}">{{ post.item.elements.title.value }}</a></li>
-            {% endfor %}
-        </ul>
+        <div class="page-content">
+          {% assign language = '#{language}' %}
+          {% assign posts = site.posts | where_exp: 'post', 'post.item.system.language == language' %}
+
+          {% for post in posts %}
+          <aside class="author">
+            <h4 class="author-bio author-name"><a href="{{ post.url | relative_url }}">{{ post.item.elements.title.value }}</a></h4>
+          </aside>
+          {% endfor %}
+        </div>
       CONTENT
       @site.pages << Page.new(@site, content, data, name)
     end
@@ -102,9 +104,11 @@ class CustomSiteProcessor
       }
       tags_dir = 'posts'
       tags_content = <<~TAGS_CONTENT
-        <ul>
-        #{tags.map{ |tag| get_tag_link(tag, language) }.join("\n")}
-        </ul>
+        <div class="tags">
+          <ul>
+            #{tags.map{ |tag| get_tag_link(tag, language) }.join("\n")}
+          </ul>
+        </div>
       TAGS_CONTENT
 
       @site.pages << Page.new(@site, tags_content, tags_data, tags_name, dir: tags_dir)
@@ -118,16 +122,18 @@ class CustomSiteProcessor
           'permalink' => "#{language}/posts/tags/#{tag.codename}"
         }
         content = <<~CONTENT
-          {% assign language = '#{language}' %}
-          {% assign tag = '#{tag.codename}' %}
-          {% assign posts = site.posts | where_exp: 'post', 'post.item.system.language == language' %}
-          {% assign tag_posts = posts | where_exp: 'post', 'post.tags contains tag' %}
-          
-          <ul>
-              {% for post in tag_posts %}
-                  <li><a href="{{ post.url | relative_url }}">{{ post.item.elements.title.value }}</a></li>
-              {% endfor %}
-          </ul>
+          <div class="tag">
+            {% assign language = '#{language}' %}
+            {% assign tag = '#{tag.codename}' %}
+            {% assign posts = site.posts | where_exp: 'post', 'post.item.system.language == language' %}
+            {% assign tag_posts = posts | where_exp: 'post', 'post.tags contains tag' %}
+
+            <ul>
+                {% for post in tag_posts %}
+                    <li><a href="{{ post.url | relative_url }}">{{ post.item.elements.title.value }}</a></li>
+                {% endfor %}
+            </ul>
+          </div>
         CONTENT
         @site.pages << Page.new(@site, content, data, name, dir: dir)
       end
@@ -153,9 +159,11 @@ class CustomSiteProcessor
       }
       categories_dir = 'posts'
       categories_content = <<~CATEGORIES_CONTENT
-        <ul>
-        #{categories.map{ |category| get_category_link(category, language) }.join("\n")}
-        </ul>
+        <div class="categories">
+          <ul>
+          #{categories.map{ |category| get_category_link(category, language) }.join("\n")}
+          </ul>
+        </div>
       CATEGORIES_CONTENT
 
       @site.pages << Page.new(@site, categories_content, categories_data, categories_name)
@@ -169,16 +177,18 @@ class CustomSiteProcessor
           'permalink' => "#{language}/posts/categories/#{category.codename}"
         }
         content = <<~CONTENT
-          {% assign language = '#{language}' %}
-          {% assign category = '#{category.codename}' %}
-          {% assign posts = site.posts | where_exp: 'post', 'post.item.system.language == language' %}
-          {% assign category_posts = posts | where_exp: 'post', 'post.categories contains category' %}
-          
-          <ul>
-              {% for post in category_posts %}
-                  <li><a href="{{ post.url | relative_url }}">{{ post.item.elements.title.value }}</a></li>
-              {% endfor %}
-          </ul>
+          <div class="category">
+            {% assign language = '#{language}' %}
+            {% assign category = '#{category.codename}' %}
+            {% assign posts = site.posts | where_exp: 'post', 'post.item.system.language == language' %}
+            {% assign category_posts = posts | where_exp: 'post', 'post.categories contains category' %}
+
+            <ul>
+                {% for post in category_posts %}
+                    <li><a href="{{ post.url | relative_url }}">{{ post.item.elements.title.value }}</a></li>
+                {% endfor %}
+            </ul>
+          </div>
         CONTENT
         @site.pages << Page.new(@site, content, data, name, dir: dir)
       end

@@ -1,0 +1,72 @@
+$color-gray-95:		#f2f2f0; // menu - background
+$color-gray-90:		#e5e4e1; // every elements border
+
+$color-red-95:		#f26a3d;
+
+$primary-color:     $color-red-95; // define primary color
+
+.avatar {
+  position: relative;
+  overflow: hidden;
+  background: $color-gray-95;
+  margin: 0;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    height: 50%;
+    bottom: 35%;
+    left: 25%;
+    border-radius: 100%;
+    background: $color-gray-90;
+  }
+
+  &:after {
+    width: 100%;
+    bottom: -25%;
+    left: 0;
+  }
+
+  img {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.page-content {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 32em;
+  margin: 0 auto;
+}
+
+.page-content > * {
+  min-width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.page-content a {
+  border-bottom: 1px solid $primary-color;
+}
+
+.page-contents a:hover,
+.page-content a:focus {
+  color: $primary-color;
+}
