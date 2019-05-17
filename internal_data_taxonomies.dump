@@ -1,0 +1,61 @@
+---
+- !ruby/object:KenticoCloud::Delivery::TaxonomyGroup
+  source:
+    system:
+      id: 9b8ce016-d965-4229-9890-2a5b1d5352e3
+      name: Post categories
+      codename: post_categories
+      last_modified: '2019-04-25T19:58:39.0074197Z'
+    terms:
+    - name: Facilisi delenit
+      codename: facilisi_delenit
+      terms: []
+    - name: Sed amet
+      codename: sed_amet
+      terms: []
+    - name: Magna et
+      codename: magna_et
+      terms: []
+- !ruby/object:KenticoCloud::Delivery::TaxonomyGroup
+  source:
+    system:
+      id: 26cc421d-3009-431b-8b93-ec79d2d332ce
+      name: Post tags
+      codename: post_tags
+      last_modified: '2019-04-25T19:58:38.4917732Z'
+    terms:
+    - name: Lorem
+      codename: lorem
+      terms: []
+    - name: Elitr
+      codename: elitr
+      terms: []
+    - name: Diam
+      codename: diam
+      terms: []
+    - name: Eos
+      codename: eos
+      terms: []
+    - name: Consequat
+      codename: consequat
+      terms: []
+- !ruby/object:KenticoCloud::Delivery::TaxonomyGroup
+  source:
+    system:
+      id: 37dae20f-38b5-49d3-8ae4-3f0346df8e81
+      name: Sitemap
+      codename: sitemap
+      last_modified: '2019-04-25T19:58:37.8824036Z'
+    terms:
+    - name: Home
+      codename: home
+      terms: []
+    - name: Posts
+      codename: posts
+      terms: []
+    - name: Authors
+      codename: authors
+      terms: []
+    - name: About us
+      codename: about_us
+      terms: []
