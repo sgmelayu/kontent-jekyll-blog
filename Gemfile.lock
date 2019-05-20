@@ -15,12 +15,18 @@ GEM
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
     eventmachine (1.2.7-x64-mingw32)
-    ffi (1.10.0)
-    ffi (1.10.0-x64-mingw32)
+    ffi (1.11.0)
+    ffi (1.11.0-x64-mingw32)
     forwardable-extended (2.6.0)
+    http (4.1.1)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 2.0)
+      http_parser.rb (~> 0.6.0)
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
+    http-form_data (2.1.1)
     http_parser.rb (0.6.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
@@ -39,8 +45,8 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.12.1)
       jekyll (>= 3.7, < 5.0)
-    jekyll-kentico (0.8.0)
-      delivery-sdk-ruby (~> 1.0)
+    jekyll-kentico (0.8.3)
+      delivery-sdk-ruby (= 1.0.4)
     jekyll-redirect-from (0.15.0)
       jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (1.5.2)
@@ -107,6 +113,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  http!
   jekyll (~> 3.8.5)!
   jekyll-kentico (~> 0.8)!
   jekyll-redirect-from!
