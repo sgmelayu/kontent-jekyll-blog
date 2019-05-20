@@ -600,3 +600,5 @@ module SampleContent
     end
   end
 end
+
+SampleContent::Initializer.initialize_sample_content
