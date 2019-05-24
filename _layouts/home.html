@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<section>
+    <h2>Posts</h2>
+
+    {% for post in page.posts %}
+        {% assign id = post.system.id %}
+        {% assign post = site.posts | where_exp: 'post', 'post.item.system.id == id' | first %}
+        {% include post.html post=post %}
+    {% endfor %}
+</section>
+
+<section>
+    <h2>Authors</h2>
+
+    {% for author in page.authors %}
+        {% assign id = author.system.id %}
+        {% assign author = site.authors | where_exp: 'author', 'author.item.system.id == id' | first %}
+        {% include authors_author.html author=author %}
+    {% endfor %}
+</section>
+
+

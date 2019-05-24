@@ -1,0 +1,12 @@
+{% assign elements = include.author.elements %}
+
+<aside class="author">
+    <figure class="author-avatar avatar">
+        <img src="{{ elements.avatar.value[0].url }}" alt="{{ elements.name.value }}">
+    </figure>
+    <div class="author-bio">
+        <h4 class="author-name"><a href="{{ author.url | relative_url }}">{{ elements.name.value }}</a></h4>
+        <p class="author-about">{{ elements.date_of_birth.value | calculate_age }} years old. {{ elements.about.value }}</p>
+        <span class="author-location">location: {{ elements.location.value }}</span>
+    </div>
+</aside>

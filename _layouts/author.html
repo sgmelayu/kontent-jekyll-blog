@@ -1,0 +1,32 @@
+---
+layout: default
+---
+{% assign elements = page.item.elements %}
+{% assign system = page.item.system %}
+
+{% assign posts = site.posts | filter_by_language: system.language | where_linked_item_contains: 'authors', system.codename %}
+
+<aside>
+    <h2>Posts</h2>
+
+    <ul>
+    {% for post in posts %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.item.elements.title.value }}</a>
+    {% endfor %}
+    </ul>
+</aside>
+
+<article>
+    <h2>{{ elements.name.value }}</h2>
+
+    <img src="{{ elements.avatar.value[0].url }}" alt="Avatar of {{ elements.name.value }}"/>
+
+    <section>
+        <h3>Biography</h3>
+
+        <p><strong>Location</strong>: {{ elements.location.value }}</p>
+        <p><strong>Birthdate</strong>: {{ elements.date_of_birth.value | stringify_date }}</p>
+        <p><strong>About</strong>: {{ elements.about.value }}</p>
+    </section>
+</article>
+

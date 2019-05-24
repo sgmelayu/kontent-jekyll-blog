@@ -1,7 +1,7 @@
 module Jekyll
   module StringifyDateFilter
-    def stringify_date(date)
-      Date.parse(date).strftime('%a, %b %d, %Y')
+    def stringify_date(date, format = '%b %d, %Y')
+      Date.parse(date).strftime(format)
     end
   end
 end

@@ -53,7 +53,7 @@ class CustomSiteProcessor
 
         <div class="page-content">
         {% for author in authors %}
-          {% include author.html author=author %}
+          {% include authors_author.html author=author.item %}
         {% endfor %}
         </div>
       CONTENT

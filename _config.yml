@@ -29,13 +29,16 @@ kentico:
     - default
   posts:
     type: blog_post
+    layout: post
     date: published
     tags: post_tags
     categories: post_categories
   pages:
     home:
+      layout: home
     page:
     author:
+      layout: author
       title: name
       collection: authors
   taxonomies:

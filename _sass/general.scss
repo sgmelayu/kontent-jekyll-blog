@@ -5,6 +5,14 @@ $color-red-95:		#f26a3d;
 
 $primary-color:     $color-red-95; // define primary color
 
+main {
+  margin: 0 auto;
+}
+
+aside {
+  float: right;
+}
+
 .avatar {
   position: relative;
   overflow: hidden;
