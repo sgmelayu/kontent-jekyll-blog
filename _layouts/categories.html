@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<main>
+    <h1>{{ page.taxonomy_group.system.name }}</h1>
+
+{% for category in page.taxonomy_group.terms %}
+    {% assign posts = site.posts | where_exp: 'post', 'post.categories contains category.codename' %}
+
+    <section>
+        <a href="{{ page.language | append:'/categories/' | append: category.codename | relative_url }}"><h2>{{ category.name }}</h2></a>
+
+        <span>Posts: {{ posts.size }}</span>
+    </section>
+{% endfor %}
+</main>

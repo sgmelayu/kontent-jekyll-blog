@@ -1,13 +1,10 @@
 - name: Home
-  url:
+  url: /posts
 - name: Authors
   url: /authors
-- name: Posts
-  url: /posts
-  subitems:
-    - name: Tags
-      url: /posts/tags
-    - name: Categories
-      url: /posts/categories
+- name: Category
+  url: /categories
+- name: Tag
+  url: /tags
 - name: About us
   url: /about-us

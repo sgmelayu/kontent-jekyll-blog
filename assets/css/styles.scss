@@ -3,8 +3,8 @@
 # only Main files contain this front matter, not partials.
 ---
 
-@import "navbar";
-@import "post";
-@import "post-navigation";
 @import "general";
+@import "navbar";
+
 @import "authors";
+@import "post";

@@ -1,0 +1,47 @@
+---
+layout: default
+---
+{% assign post = page.item %}
+{% assign elements = post.elements %}
+{% assign language = post.system.language %}
+
+{% assign published_date = elements.published.value | stringify_date: "%A, %B %d, %Y" %}
+
+<main class="post">
+    <h1>{{ page.title  }}</h1>
+
+    <section>
+        <section>
+            <strong><label for="published_date">Published:</label></strong>
+            <span id="published_date">{{ published_date }}</span>
+        </section>
+
+        <section>
+            <strong><label for="categories">Categories:</label></strong>
+
+            <span id="categories">
+            {% for category in elements.post_categories.value %}
+                {% assign category_url = language | append: '/categories/' | append: category.codename %}
+                <a href="{{ category_url | relative_url }}">{{ category.name }}</a>
+            {% endfor %}
+            </span>
+        </section>
+
+        <section>
+            <strong><label for="tags">Tags:</label></strong>
+
+            <span id="tags">
+            {% for tag in elements.post_tags.value %}
+                {% assign tag_url = language | append: '/tags/' | append: tag.codename %}
+                <a href="{{ tag_url | relative_url }}">{{ tag.name }}</a>
+            {% endfor %}
+            </span>
+        </section>
+    </section>
+
+    <article>
+        <img src="{{ elements.thumbnail.value[0].url }}" alt="">
+
+        <section>{{ elements.content.value }}</section>
+    </article>
+</main>

@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+{% assign posts = site.posts | where_exp: 'post', 'post.item.system.language == page.language' %}
+
+<main>
+    <section>
+        <h1>Latest posts</h1>
+
+        {% include posts.html posts=posts heading_level=2 %}
+    </section>
+</main>

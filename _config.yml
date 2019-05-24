@@ -17,7 +17,6 @@ kentico:
   project_id: ENV_PROJECT_ID
   secure_key: ENV_DELIVERY_API_KEY
   front_matter_resolver: FrontMatterResolver
-  content_resolver: ContentResolver
   filename_resolver: FilenameResolver
   data_resolver: DataResolver
   content_link_resolver: ContentLinkResolver
@@ -29,16 +28,18 @@ kentico:
     - default
   posts:
     type: blog_post
+    layout: post
     date: published
     tags: post_tags
     categories: post_categories
   pages:
-    home:
     page:
+      layout: page
     author:
+      layout: author
       title: name
       collection: authors
   taxonomies:
-   - sitemap
+   - content
    - post_categories
    - post_tags

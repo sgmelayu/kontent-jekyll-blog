@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<main>
+    <h1>{{ page.tag.name }}</h1>
+
+    {% assign posts = site.posts | where_exp: 'post', 'post.item.system.language == page.language' %}
+    {% assign tag_posts = posts | where_exp: 'post', 'post.tags contains page.tag.codename' %}
+
+    {% include posts.html posts=tag_posts heading_level=2 %}
+</main>

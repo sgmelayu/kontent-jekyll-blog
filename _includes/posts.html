@@ -1,0 +1,33 @@
+{% assign posts = include.posts %}
+{% assign heading_level = include.heading_level %}
+
+{% for post in posts %}
+{% assign elements = post.item.elements %}
+<article class="main-item">
+    <a href="{{ post.url | relative_url }}">
+        <h{{ heading_level }}>{{ elements.title.value }}</h{{ heading_level }}>
+    </a>
+    <img src="{{ elements.thumbnail.value[0].url }}" alt="Thumbnail for blog post"/>
+
+    <section>
+        <span>
+            {% for author_codename in elements.authors.value %}
+            {% assign author = site.authors | where_exp: 'a', 'a.item.system.codename == author_codename' | first %}
+            <a href="{{ author.url | relative_url }}">{{ author.item.elements.name.value }}</a>
+            {% endfor %}
+        </span>
+        <span>
+            {% for category in elements.post_categories.value %}
+            {% include category_link.html category=category language=page.language %}
+            {% endfor %}
+        </span>
+        <span>{{ elements.published.value | stringify_date: '%a, %b %d, %Y' }}</span>
+    </section>
+
+    <section>
+        {{ elements.short_description.value }}
+    </section>
+</article>
+{% endfor %}
+
+
