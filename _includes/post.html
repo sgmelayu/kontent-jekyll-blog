@@ -1,8 +1,0 @@
-{% assign elements = include.post.item.elements %}
-
-<aside class="post">
-    <img src="{{ elements.thumbnail.value[0].url }}"/>
-    <a href="{{ post-url }}"><label>{{ elements.title.value }}</label></a>
-    <div class="post-date">{{ elements.published.value | stringify_date }}</div>
-    <div class="post-excerpt">{{ elements.short_description.value }}</div>
-</aside>

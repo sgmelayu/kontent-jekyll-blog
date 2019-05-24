@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<div>
+    <ul>
+        {% for category in page.categories %}
+        <li><a href="{{ page.language | append:'/posts/categories/' | append: category.codename | relative_url }}">{{ category.name }}</a>
+            {% endfor %}
+    </ul>
+</div>

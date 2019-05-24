@@ -2,17 +2,20 @@ class FrontMatterResolver
   def resolve(content_item, _page_type)
     @item = content_item
 
-    {
+    extra_data = get_extra_data
+
+    data = {
       permalink: permalink,
-      language: language,
-      redirect_from: redirect_from
+      language: language
     }
+
+    data.merge!(extra_data) if extra_data
+    data
   end
 
   private
 
-  def redirect_from
-    [''] if type == 'home' && language == 'default'
+  def get_extra_data
   end
 
   def type
@@ -25,11 +28,10 @@ class FrontMatterResolver
 
   def permalink
     language_base = "/#{language}"
-    sitemap = @item.elements.sitemap.value.first&.codename
+    category = @item.elements.site_content.value.first&.codename
     slug = @item.elements.slug.value
 
-    return language_base if type == 'home'
-    return "#{language_base}/#{sitemap}/#{slug}" if sitemap
+    return "#{language_base}/#{category}/#{slug}" if category
 
     "#{language_base}/#{slug}"
   end

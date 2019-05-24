@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<main>
+    {% assign posts = site.posts | where_exp: 'post', 'post.item.system.language == page.language' %}
+    {% assign category_posts = posts | where_exp: 'post', 'post.categories contains page.category.codename' %}
+
+    {% include posts.html posts=category_posts heading_level=2 %}
+</main>

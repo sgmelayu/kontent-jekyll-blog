@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<div>
+    <ul>
+    {% for tag in page.tags %}
+        <li><a href="{{ page.language | append:'/posts/tags/' | append: tag.codename | relative_url }}">{{ tag.name }}</a>
+    {% endfor %}
+    </ul>
+</div>

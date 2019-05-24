@@ -1,0 +1,14 @@
+.home {
+  display: flex;
+
+  .home-subitems {
+    margin: 0;
+    font-size: 1.5em;
+    flex: 1;
+    max-width: 192px;
+  }
+
+  .home-posts {
+    flex: 4;
+  }
+}

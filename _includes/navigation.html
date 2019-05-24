@@ -1,51 +1,18 @@
 {% assign current_page_url = page.url | relative_url %}
 {% assign page_language = include.language %}
 
-<div class="navbar">
+<nav class="navbar">
     {% for item in site.data.nav %}
         {% assign language_prefixed_url = item.url | prefix_with_language: page_language %}
         {% assign nav_page_url = language_prefixed_url | relative_url %}
 
         {% assign should_highlight_url = page.url | should_be_highlighted: language_prefixed_url %}
 
-        {% if item.subitems %}
-            <div class="dropdown">
-                <form>
-                    <button
-                        {% if should_highlight_url %}
-                            class="dropbtn current"
-                        {% else %}
-                            class="dropbtn"
-                        {% endif %}
-                        formaction="{{ nav_page_url }}"
-                    >
-                        {{ item.name }}
-                        <i class="fa fa-carret-down"></i>
-                    </button>
-                </form>
-
-                <div class="dropdown-content">
-                    {% for subitem in item.subitems %}
-                        {% assign language_prefixed_url = subitem.url | prefix_with_language: page_language %}
-                        {% assign nav_page_url = language_prefixed_url | relative_url %}
-
-                        {% assign should_highlight_url = page.url | should_be_highlighted: language_prefixed_url %}
-
-                        <a href="{{ nav_page_url }}"
-                           {% if should_highlight_url %} class="current" {% endif %}
-                        >
-                            {{ subitem.name }}
-                        </a>
-                    {% endfor %}
-                </div>
-            </div>
-        {% else %}
-            <a href="{{ nav_page_url }}"
-               {% if should_highlight_url %} class="current" {% endif %}
-            >
-                {{ item.name }}
-            </a>
-        {% endif %}
+        <a href="{{ nav_page_url }}"
+           {% if should_highlight_url %} class="current" {% endif %}
+        >
+            {{ item.name }}
+        </a>
     {% endfor %}
 
     {% assign other_language = page_language | get_other_language %}
@@ -53,4 +20,4 @@
         {% assign other_language_url = page.url | switch_url_to_language: other_language %}
         <a href="{{ other_language_url | relative_url }}" style="float: right;" >{{ other_language }}</a>
     {% endif %}
-</div>
+</nav>

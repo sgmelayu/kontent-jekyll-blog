@@ -6,8 +6,13 @@
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
 </head>
 <body>
-    {% include navigation.html language=page.language %}
-    {% assign passed_content = content | strip_newlines %}
+    <header>
+        {% include navigation.html language=page.language %}
+    </header>
+
     {{ content }}
+
+    <footer>
+    </footer>
 </body>
 </html>

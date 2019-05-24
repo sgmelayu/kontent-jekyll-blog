@@ -1,72 +1,45 @@
-$color-gray-95:		#f2f2f0; // menu - background
-$color-gray-90:		#e5e4e1; // every elements border
+html {
+  font-size: 10px;
+}
 
-$color-red-95:		#f26a3d;
-
-$primary-color:     $color-red-95; // define primary color
-
-.avatar {
-  position: relative;
-  overflow: hidden;
-  background: $color-gray-95;
+body {
   margin: 0;
+  font-size: 1.6rem;
+}
 
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    width: 50%;
-    height: 50%;
-    bottom: 35%;
-    left: 25%;
-    border-radius: 100%;
-    background: $color-gray-90;
-  }
-
-  &:after {
-    width: 100%;
-    bottom: -25%;
-    left: 0;
-  }
+main > section, main > article {
+  max-width: 768px;
+  margin: 0 auto;
+  text-align: center;
 
   img {
-    position: relative;
-    z-index: 2;
     display: block;
-    width: 100%;
-    height: auto;
+    margin: 0 auto;
   }
 }
 
-.page-content {
-  padding: 2em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 32em;
-  margin: 0 auto;
+* + section {
+  margin: 1rem;
 }
 
-.page-content > * {
-  min-width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  &:first-child {
-    margin-top: 0;
+main {
+  aside {
+    max-width: 192px;
   }
 }
 
-.page-content a {
-  border-bottom: 1px solid $primary-color;
+h1, h2, h3 {
+  text-align: center;
 }
 
-.page-contents a:hover,
-.page-content a:focus {
-  color: $primary-color;
+.main-item:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+span + span::before {
+  content: '| ';
+}
+
+span a:not(:last-child)::after {
+  content: ', ';
 }
