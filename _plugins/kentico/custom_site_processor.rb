@@ -76,21 +76,20 @@ class CustomSiteProcessor
         'layout' => 'tags',
         'tags' => tags.map { |t| { 'codename' => t.codename, 'name' => t.name } },
         'language' => language,
-        'permalink' => "/#{language}/posts/tags"
+        'permalink' => "/#{language}/tags"
       }
-      tags_dir = 'posts'
 
-      @site.pages << Page.new(@site, nil, tags_data, tags_name, dir: tags_dir)
+      @site.pages << Page.new(@site, nil, tags_data, tags_name)
 
       tags.each do |tag|
         name = "#{tag.codename}-#{language}.html"
-        dir = 'posts/tags'
+        dir = 'tags'
         data = {
           'title' => "#{tag.name}",
           'layout' => 'tag',
           'tag' => { 'codename' => tag.codename, 'name' => tag.name },
           'language' => language,
-          'permalink' => "#{language}/posts/tags/#{tag.codename}"
+          'permalink' => "#{language}/tags/#{tag.codename}"
         }
         @site.pages << Page.new(@site, nil, data, name, dir: dir)
       end
@@ -107,21 +106,20 @@ class CustomSiteProcessor
         'layout' => 'categories',
         'language' => language,
         'categories' => categories.map { |c| { 'codename' => c.codename, 'name' => c.name } },
-        'permalink' => "/#{language}/posts/categories"
+        'permalink' => "/#{language}/categories"
       }
-      categories_dir = 'posts'
 
-      @site.pages << Page.new(@site, nil, categories_data, categories_name, dir: categories_dir)
+      @site.pages << Page.new(@site, nil, categories_data, categories_name)
 
       categories.each do |category|
         name = "#{category.codename}-#{language}.html"
-        dir = 'posts/categories'
+        dir = 'categories'
         data = {
           'title' => "#{category.name}",
           'layout' => 'category',
           'language' => language,
           'category' => { 'codename' => category.codename, 'name' => category.name },
-          'permalink' => "#{language}/posts/categories/#{category.codename}"
+          'permalink' => "#{language}/categories/#{category.codename}"
         }
         @site.pages << Page.new(@site, nil, data, name, dir: dir)
       end

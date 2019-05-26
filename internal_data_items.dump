@@ -9,7 +9,7 @@ blog_post:
       language: default
       type: blog_post
       sitemap_locations: []
-      last_modified: '2019-05-03T15:07:24.5825514Z'
+      last_modified: '2019-05-24T14:51:57.8716793Z'
     elements:
       title:
         type: text
@@ -71,92 +71,15 @@ blog_post:
         value:
         - name: Eos
           codename: eos
-      sitemap:
+      site_content:
         type: taxonomy
-        name: Sitemap
-        taxonomy_group: sitemap
+        name: Site content
+        taxonomy_group: site_content
         value:
         - name: Posts
           codename: posts
   linked_items_resolver: &3 !ruby/object:KenticoCloud::Delivery::Resolvers::LinkedItemResolver
     modular_content:
-      a_habitant_pharetra_phasellus_urna_facilisis:
-        system:
-          id: 40d8ca55-5ec9-5f63-b723-1a9a3ed966db
-          name: A Habitant Pharetra Phasellus Urna Facilisis
-          codename: a_habitant_pharetra_phasellus_urna_facilisis
-          language: default
-          type: blog_post
-          sitemap_locations: []
-          last_modified: '2019-05-03T15:07:24.5825514Z'
-        elements:
-          title:
-            type: text
-            name: Title
-            value: A Habitant Pharetra Phasellus Urna Facilisis
-          slug:
-            type: url_slug
-            name: Slug
-            value: a-habitant-pharetra-phasellus-urna-facilisis
-          published:
-            type: date_time
-            name: Published
-            value: '2019-07-17T00:00:00Z'
-          thumbnail:
-            type: asset
-            name: Thumbnail
-            value:
-            - name: '300'
-              description: ''
-              type: image/jpeg
-              size: 29573
-              url: https://assets-us-01.kc-usercontent.com:443/53c7c06c-d108-00df-f62c-5338f11c4482/6ebc63d1-6566-493f-8703-8284c75e6783/300
-              width: 500
-              height: 300
-          authors:
-            type: modular_content
-            name: Authors
-            value:
-            - catherine_munoz
-          content:
-            type: rich_text
-            name: Content
-            images: {}
-            links: {}
-            modular_content: []
-            value: |-
-              <h2>A Habitant Pharetra Phasellus Urna Facilisis</h2>
-              <h3>Erat Placerat Scelerisque Justo Quam Facilisi</h3>
-              <p>Platea praesent. Justo arcu varius nostra est platea lacinia feugiat. Nullam euismod Dictum pretium dictum Sem tellus vitae bibendum. Ullamcorper&nbsp;<em>hendrerit</em>integer condimentum netus neque mauris.</p>
-              <p>Platea mus parturient habitasse suscipit rutrum elit magnis aenean et dictum sed&nbsp;<em>auctor</em>&nbsp;vivamus pellentesque cubilia elementum rutrum eu nisi tincidunt, fermentum dapibus montes, urna. Turpis sollicitudin placerat tortor vestibulum pellentesque ante mollis facilisis scelerisque mauris. Sociosqu consequat imperdiet sociis erat elementum&nbsp;<em>imperdiet</em>&nbsp;platea lacus odio netus.</p>
-              <p>Donec mollis. Cras hac aenean torquent. Etiam ullamcorper posuere sagittis eu Scelerisque cras. Curae; pulvinar rutrum dapibus mauris sagittis justo odio hac&nbsp;<strong>proin</strong>&nbsp;class sit placerat odio.</p>
-          short_description:
-            type: text
-            name: Short description
-            value: Platea praesent. Justo arcu varius nostra est platea lacinia feugiat.
-              Nullam euismod Dictum pretium dictum Sem tellus vitae bibendum. Ullamcorper
-              hendreritinteger condimentum netus neque mauris.
-          post_categories:
-            type: taxonomy
-            name: Post categories
-            taxonomy_group: post_categories
-            value:
-            - name: Magna et
-              codename: magna_et
-          post_tags:
-            type: taxonomy
-            name: Post tags
-            taxonomy_group: post_tags
-            value:
-            - name: Eos
-              codename: eos
-          sitemap:
-            type: taxonomy
-            name: Sitemap
-            taxonomy_group: sitemap
-            value:
-            - name: Posts
-              codename: posts
       catherine_munoz:
         system:
           id: b4d49410-5906-5d5f-a461-93a464426a38
@@ -165,7 +88,7 @@ blog_post:
           language: default
           type: author
           sitemap_locations: []
-          last_modified: '2019-04-25T19:58:44.6032911Z'
+          last_modified: '2019-05-24T14:52:24.8802663Z'
         elements:
           name:
             type: text
@@ -199,10 +122,10 @@ blog_post:
             name: About
             value: Hipster-friendly alcohol lover. Extreme internet advocate. Web
               geek. Incurable food nerd. Freelance introvert.
-          sitemap:
+          site_content:
             type: taxonomy
-            name: Sitemap
-            taxonomy_group: sitemap
+            name: Site content
+            taxonomy_group: site_content
             value:
             - name: Authors
               codename: authors
@@ -214,7 +137,7 @@ blog_post:
           language: default
           type: author
           sitemap_locations: []
-          last_modified: '2019-04-25T19:58:48.0275114Z'
+          last_modified: '2019-05-24T14:52:32.5564156Z'
         elements:
           name:
             type: text
@@ -248,10 +171,10 @@ blog_post:
             name: About
             value: Coffee nerd. Extreme foodaholic. Beer evangelist. Alcohol lover.
               Incurable social media ninja.
-          sitemap:
+          site_content:
             type: taxonomy
-            name: Sitemap
-            taxonomy_group: sitemap
+            name: Site content
+            taxonomy_group: site_content
             value:
             - name: Authors
               codename: authors
@@ -263,7 +186,7 @@ blog_post:
           language: default
           type: author
           sitemap_locations: []
-          last_modified: '2019-04-25T19:58:51.6387258Z'
+          last_modified: '2019-05-24T14:52:40.4161941Z'
         elements:
           name:
             type: text
@@ -297,93 +220,13 @@ blog_post:
             name: About
             value: Twitter evangelist. Music trailblazer. Reader. Subtly charming
               explorer.
-          sitemap:
+          site_content:
             type: taxonomy
-            name: Sitemap
-            taxonomy_group: sitemap
+            name: Site content
+            taxonomy_group: site_content
             value:
             - name: Authors
               codename: authors
-      facilisi:
-        system:
-          id: d3e5d8bf-b5e6-57b7-b640-0c67bb5eda9a
-          name: Facilisi
-          codename: facilisi
-          language: default
-          type: blog_post
-          sitemap_locations: []
-          last_modified: '2019-05-03T15:07:56.9621841Z'
-        elements:
-          title:
-            type: text
-            name: Title
-            value: Facilisi
-          slug:
-            type: url_slug
-            name: Slug
-            value: facilisi
-          published:
-            type: date_time
-            name: Published
-            value: '2019-09-12T00:00:00Z'
-          thumbnail:
-            type: asset
-            name: Thumbnail
-            value:
-            - name: '300'
-              description: ''
-              type: image/jpeg
-              size: 18443
-              url: https://assets-us-01.kc-usercontent.com:443/53c7c06c-d108-00df-f62c-5338f11c4482/4fe6f60d-692d-499f-b2cf-b898841c0edd/300
-              width: 500
-              height: 300
-          authors:
-            type: modular_content
-            name: Authors
-            value:
-            - catherine_munoz
-          content:
-            type: rich_text
-            name: Content
-            images: {}
-            links: {}
-            modular_content: []
-            value: |-
-              <h2>Facilisi</h2>
-              <h3>Enim Per Eros Natoque Proin Fames Libero Habitant</h3>
-              <p>Habitasse non scelerisque neque class aenean purus egestas duis bibendum commodo Fringilla ante suspendisse magna tincidunt. Platea pharetra Facilisi suscipit Habitant. Per Ipsum quisque proin accumsan sollicitudin ultricies. Fames. Ante ad enim ac viverra eros ut maecenas scelerisque aptent class, venenatis iaculis&nbsp;<strong>convallis</strong>&nbsp;sociosqu commodo.</p>
-              <p>Litora torquent class blandit per sociis leo nibh integer odio. Pede sit sodales sagittis netus. Primis donec aliquet. Dictum hendrerit lorem purus vitae habitasse volutpat. Rutrum id nisi&nbsp;<em>ipsum</em>&nbsp;sollicitudin tempus ligula facilisis sociis at.</p>
-              <p>Arcu auctor volutpat dolor vivamus. Elementum sociosqu. Malesuada&nbsp;<strong>ad</strong>&nbsp;leo purus, vestibulum. Blandit. Morbi eget ad curabitur diam in lectus.</p>
-          short_description:
-            type: text
-            name: Short description
-            value: Habitasse non scelerisque neque class aenean purus egestas duis
-              bibendum commodo Fringilla ante suspendisse magna tincidunt. Platea
-              pharetra Facilisi suscipit Habitant. Per Ipsum quisque proin accumsan
-              sollicitudin ultricies.
-          post_categories:
-            type: taxonomy
-            name: Post categories
-            taxonomy_group: post_categories
-            value:
-            - name: Facilisi delenit
-              codename: facilisi_delenit
-          post_tags:
-            type: taxonomy
-            name: Post tags
-            taxonomy_group: post_tags
-            value:
-            - name: Lorem
-              codename: lorem
-            - name: Elitr
-              codename: elitr
-          sitemap:
-            type: taxonomy
-            name: Sitemap
-            taxonomy_group: sitemap
-            value:
-            - name: Posts
-              codename: posts
       lauren_wade:
         system:
           id: 717b98cf-af4f-5c42-9b6e-83a60f5b4a7f
@@ -392,7 +235,7 @@ blog_post:
           language: default
           type: author
           sitemap_locations: []
-          last_modified: '2019-04-25T19:58:55.9669979Z'
+          last_modified: '2019-05-24T14:52:53.8128455Z'
         elements:
           name:
             type: text
@@ -426,10 +269,10 @@ blog_post:
             name: About
             value: Bacon enthusiast. Music advocate. Beer expert. Incurable food fan.
               Avid introvert. Freelance entrepreneur. Explorer.
-          sitemap:
+          site_content:
             type: taxonomy
-            name: Sitemap
-            taxonomy_group: sitemap
+            name: Site content
+            taxonomy_group: site_content
             value:
             - name: Authors
               codename: authors
@@ -441,7 +284,7 @@ blog_post:
           language: default
           type: author
           sitemap_locations: []
-          last_modified: '2019-04-25T19:58:59.873445Z'
+          last_modified: '2019-05-24T14:52:59.8759999Z'
         elements:
           name:
             type: text
@@ -475,94 +318,13 @@ blog_post:
             name: About
             value: Unapologetic communicator. Travel geek. Food practitioner. Coffee
               maven. Avid internet specialist. Music nerd.
-          sitemap:
+          site_content:
             type: taxonomy
-            name: Sitemap
-            taxonomy_group: sitemap
+            name: Site content
+            taxonomy_group: site_content
             value:
             - name: Authors
               codename: authors
-      tempor_luctus_imperdiet_massa_id_et:
-        system:
-          id: 2bf05f46-3420-5045-910f-13cdb011bcde
-          name: Tempor Luctus Imperdiet Massa Id Et
-          codename: tempor_luctus_imperdiet_massa_id_et
-          language: default
-          type: blog_post
-          sitemap_locations: []
-          last_modified: '2019-05-03T15:10:23.2054092Z'
-        elements:
-          title:
-            type: text
-            name: Title
-            value: Tempor Luctus Imperdiet Massa Id Et
-          slug:
-            type: url_slug
-            name: Slug
-            value: tempor-luctus-imperdiet-massa-id-et
-          published:
-            type: date_time
-            name: Published
-            value: '2019-05-22T00:00:00Z'
-          thumbnail:
-            type: asset
-            name: Thumbnail
-            value:
-            - name: '300'
-              description: ''
-              type: image/jpeg
-              size: 19100
-              url: https://assets-us-01.kc-usercontent.com:443/53c7c06c-d108-00df-f62c-5338f11c4482/03e5e7ab-c88d-4032-ad98-4aef6d38890c/300
-              width: 500
-              height: 300
-          authors:
-            type: modular_content
-            name: Authors
-            value:
-            - catherine_munoz
-          content:
-            type: rich_text
-            name: Content
-            images: {}
-            links: {}
-            modular_content: []
-            value: |-
-              <h2>Tempor Luctus Imperdiet Massa Id Et</h2>
-              <h3>Ullamcorper Aliquet Posuere Lorem</h3>
-              <p><em>Pede</em>&nbsp;mi quam parturient libero lacinia auctor magnis nunc vestibulum euismod imperdiet morbi praesent tristique Ullamcorper posuere&nbsp;<em>quis</em>&nbsp;tempus ipsum dolor dapibus morbi a nullam scelerisque nostra mi eget fames quam magna justo.</p>
-              <p>Fermentum magna duis pharetra morbi aenean condimentum mus arcu&nbsp;<em>vel</em>vivamus lacus amet torquent dictum vivamus dolor Vivamus. Cursus&nbsp;<strong>ut</strong>&nbsp;turpis dictum nam Ac vitae. Sapien erat vehicula dictumst bibendum. Nonummy turpis mus.</p>
-              <h3>A Consequat Malesuada</h3>
-              <p>Dapibus vulputate, euismod&nbsp;<em>cubilia</em>&nbsp;feugiat condimentum&nbsp;<strong>orci</strong>&nbsp;lacus&nbsp;<em>id</em>&nbsp;parturient porta tincidunt pharetra interdum tempor. Volutpat ultrices accumsan sagittis torquent suscipit per, aliquet hendrerit mattis dui. Luctus ut adipiscing rutrum. Interdum sapien a facilisis.</p>
-          short_description:
-            type: text
-            name: Short description
-            value: Pede mi quam parturient libero lacinia auctor magnis nunc vestibulum
-              euismod imperdiet morbi praesent tristique Ullamcorper posuere quis
-              tempus ipsum dolor dapibus morbi a nullam scelerisque nostra mi eget
-              fames quam magna justo.
-          post_categories:
-            type: taxonomy
-            name: Post categories
-            taxonomy_group: post_categories
-            value:
-            - name: Facilisi delenit
-              codename: facilisi_delenit
-            - name: Magna et
-              codename: magna_et
-          post_tags:
-            type: taxonomy
-            name: Post tags
-            taxonomy_group: post_tags
-            value:
-            - name: Diam
-              codename: diam
-          sitemap:
-            type: taxonomy
-            name: Sitemap
-            taxonomy_group: sitemap
-            value:
-            - name: Posts
-              codename: posts
     content_link_url_resolver: &1 !ruby/object:ContentLinkResolver
       found_handler: 
       not_found: 
@@ -579,7 +341,7 @@ blog_post:
       :language: default
       :type: blog_post
       :sitemap_locations: []
-      :last_modified: '2019-05-03T15:07:24.5825514Z'
+      :last_modified: '2019-05-24T14:51:57.8716793Z'
     modifiable: true
 - !ruby/object:KenticoCloud::Delivery::ContentItem
   source:
@@ -590,7 +352,7 @@ blog_post:
       language: default
       type: blog_post
       sitemap_locations: []
-      last_modified: '2019-05-03T15:07:40.1478675Z'
+      last_modified: '2019-05-24T14:52:15.8166405Z'
     elements:
       title:
         type: text
@@ -658,10 +420,10 @@ blog_post:
           codename: elitr
         - name: Eos
           codename: eos
-      sitemap:
+      site_content:
         type: taxonomy
-        name: Sitemap
-        taxonomy_group: sitemap
+        name: Site content
+        taxonomy_group: site_content
         value:
         - name: Posts
           codename: posts
@@ -676,7 +438,7 @@ blog_post:
       :language: default
       :type: blog_post
       :sitemap_locations: []
-      :last_modified: '2019-05-03T15:07:40.1478675Z'
+      :last_modified: '2019-05-24T14:52:15.8166405Z'
     modifiable: true
 - !ruby/object:KenticoCloud::Delivery::ContentItem
   source:
@@ -687,7 +449,7 @@ blog_post:
       language: default
       type: blog_post
       sitemap_locations: []
-      last_modified: '2019-05-03T15:07:56.9621841Z'
+      last_modified: '2019-05-24T14:52:46.6718344Z'
     elements:
       title:
         type: text
@@ -751,10 +513,10 @@ blog_post:
           codename: lorem
         - name: Elitr
           codename: elitr
-      sitemap:
+      site_content:
         type: taxonomy
-        name: Sitemap
-        taxonomy_group: sitemap
+        name: Site content
+        taxonomy_group: site_content
         value:
         - name: Posts
           codename: posts
@@ -769,7 +531,7 @@ blog_post:
       :language: default
       :type: blog_post
       :sitemap_locations: []
-      :last_modified: '2019-05-03T15:07:56.9621841Z'
+      :last_modified: '2019-05-24T14:52:46.6718344Z'
     modifiable: true
 - !ruby/object:KenticoCloud::Delivery::ContentItem
   source:
@@ -780,7 +542,7 @@ blog_post:
       language: default
       type: blog_post
       sitemap_locations: []
-      last_modified: '2019-05-03T15:09:12.8288839Z'
+      last_modified: '2019-05-24T14:53:05.9709752Z'
     elements:
       title:
         type: text
@@ -846,10 +608,10 @@ blog_post:
           codename: eos
         - name: Consequat
           codename: consequat
-      sitemap:
+      site_content:
         type: taxonomy
-        name: Sitemap
-        taxonomy_group: sitemap
+        name: Site content
+        taxonomy_group: site_content
         value:
         - name: Posts
           codename: posts
@@ -864,7 +626,7 @@ blog_post:
       :language: default
       :type: blog_post
       :sitemap_locations: []
-      :last_modified: '2019-05-03T15:09:12.8288839Z'
+      :last_modified: '2019-05-24T14:53:05.9709752Z'
     modifiable: true
 - !ruby/object:KenticoCloud::Delivery::ContentItem
   source:
@@ -875,7 +637,7 @@ blog_post:
       language: default
       type: blog_post
       sitemap_locations: []
-      last_modified: '2019-05-03T15:09:43.1550358Z'
+      last_modified: '2019-05-24T14:53:17.1940534Z'
     elements:
       title:
         type: text
@@ -941,10 +703,10 @@ blog_post:
           codename: diam
         - name: Consequat
           codename: consequat
-      sitemap:
+      site_content:
         type: taxonomy
-        name: Sitemap
-        taxonomy_group: sitemap
+        name: Site content
+        taxonomy_group: site_content
         value:
         - name: Posts
           codename: posts
@@ -959,7 +721,7 @@ blog_post:
       :language: default
       :type: blog_post
       :sitemap_locations: []
-      :last_modified: '2019-05-03T15:09:43.1550358Z'
+      :last_modified: '2019-05-24T14:53:17.1940534Z'
     modifiable: true
 - !ruby/object:KenticoCloud::Delivery::ContentItem
   source:
@@ -970,7 +732,7 @@ blog_post:
       language: default
       type: blog_post
       sitemap_locations: []
-      last_modified: '2019-05-03T15:10:23.2054092Z'
+      last_modified: '2019-05-24T14:53:27.8481335Z'
     elements:
       title:
         type: text
@@ -1036,10 +798,10 @@ blog_post:
         value:
         - name: Diam
           codename: diam
-      sitemap:
+      site_content:
         type: taxonomy
-        name: Sitemap
-        taxonomy_group: sitemap
+        name: Site content
+        taxonomy_group: site_content
         value:
         - name: Posts
           codename: posts
@@ -1054,7 +816,7 @@ blog_post:
       :language: default
       :type: blog_post
       :sitemap_locations: []
-      :last_modified: '2019-05-03T15:10:23.2054092Z'
+      :last_modified: '2019-05-24T14:53:27.8481335Z'
     modifiable: true
 page:
 - !ruby/object:KenticoCloud::Delivery::ContentItem
@@ -1066,7 +828,7 @@ page:
       language: default
       type: page
       sitemap_locations: []
-      last_modified: '2019-04-25T19:59:01.4203578Z'
+      last_modified: '2019-05-25T12:07:33.0772073Z'
     elements:
       title:
         type: text
@@ -1082,11 +844,17 @@ page:
         images: {}
         links: {}
         modular_content: []
-        value: "<p>Dummy.</p>"
-      sitemap:
+        value: |-
+          <h2>Etiam Lacinia Pede</h2>
+          <h3>Nam Natoque</h3>
+          <p><strong>Ridiculus</strong> sociis <em>euismod</em> magnis habitasse nibh <em>scelerisque</em> cubilia dolor natoque dolor semper porta aliquet tellus <strong>purus</strong> ullamcorper aliquet quam eget proin est faucibus ridiculus. Facilisi at, aliquam tincidunt.</p>
+          <p>Felis amet curabitur tellus tristique maecenas morbi porta pretium sem ante a iaculis. <em>A</em> <strong>tortor</strong> nonummy nibh bibendum egestas dolor sagittis condimentum sagittis ridiculus tincidunt sed accumsan dapibus tortor Donec velit laoreet diam <em>purus</em> dignissim congue auctor, inceptos.</p>
+          <h3>Nam Dis Suscipit Ultricies Sociis</h3>
+          <p>Nam. Erat laoreet sagittis. <strong>Vehicula</strong> non arcu sodales enim non convallis ultrices semper fringilla platea Pulvinar justo tristique mi ligula commodo sociosqu cum bibendum arcu posuere proin mi ipsum mollis fusce vestibulum Nunc. Diam.</p>
+      site_content:
         type: taxonomy
-        name: Sitemap
-        taxonomy_group: sitemap
+        name: Site content
+        taxonomy_group: site_content
         value: []
   linked_items_resolver: *3
   content_link_url_resolver: *1
@@ -1099,7 +867,7 @@ page:
       :language: default
       :type: page
       :sitemap_locations: []
-      :last_modified: '2019-04-25T19:59:01.4203578Z'
+      :last_modified: '2019-05-25T12:07:33.0772073Z'
     modifiable: true
 author:
 - !ruby/object:KenticoCloud::Delivery::ContentItem
@@ -1111,7 +879,7 @@ author:
       language: default
       type: author
       sitemap_locations: []
-      last_modified: '2019-04-25T19:58:44.6032911Z'
+      last_modified: '2019-05-24T14:52:24.8802663Z'
     elements:
       name:
         type: text
@@ -1145,10 +913,10 @@ author:
         name: About
         value: Hipster-friendly alcohol lover. Extreme internet advocate. Web geek.
           Incurable food nerd. Freelance introvert.
-      sitemap:
+      site_content:
         type: taxonomy
-        name: Sitemap
-        taxonomy_group: sitemap
+        name: Site content
+        taxonomy_group: site_content
         value:
         - name: Authors
           codename: authors
@@ -1163,7 +931,7 @@ author:
       :language: default
       :type: author
       :sitemap_locations: []
-      :last_modified: '2019-04-25T19:58:44.6032911Z'
+      :last_modified: '2019-05-24T14:52:24.8802663Z'
     modifiable: true
 - !ruby/object:KenticoCloud::Delivery::ContentItem
   source:
@@ -1174,7 +942,7 @@ author:
       language: default
       type: author
       sitemap_locations: []
-      last_modified: '2019-04-25T19:58:48.0275114Z'
+      last_modified: '2019-05-24T14:52:32.5564156Z'
     elements:
       name:
         type: text
@@ -1208,10 +976,10 @@ author:
         name: About
         value: Coffee nerd. Extreme foodaholic. Beer evangelist. Alcohol lover. Incurable
           social media ninja.
-      sitemap:
+      site_content:
         type: taxonomy
-        name: Sitemap
-        taxonomy_group: sitemap
+        name: Site content
+        taxonomy_group: site_content
         value:
         - name: Authors
           codename: authors
@@ -1226,7 +994,7 @@ author:
       :language: default
       :type: author
       :sitemap_locations: []
-      :last_modified: '2019-04-25T19:58:48.0275114Z'
+      :last_modified: '2019-05-24T14:52:32.5564156Z'
     modifiable: true
 - !ruby/object:KenticoCloud::Delivery::ContentItem
   source:
@@ -1237,7 +1005,7 @@ author:
       language: default
       type: author
       sitemap_locations: []
-      last_modified: '2019-04-25T19:58:51.6387258Z'
+      last_modified: '2019-05-24T14:52:40.4161941Z'
     elements:
       name:
         type: text
@@ -1270,10 +1038,10 @@ author:
         type: text
         name: About
         value: Twitter evangelist. Music trailblazer. Reader. Subtly charming explorer.
-      sitemap:
+      site_content:
         type: taxonomy
-        name: Sitemap
-        taxonomy_group: sitemap
+        name: Site content
+        taxonomy_group: site_content
         value:
         - name: Authors
           codename: authors
@@ -1288,7 +1056,7 @@ author:
       :language: default
       :type: author
       :sitemap_locations: []
-      :last_modified: '2019-04-25T19:58:51.6387258Z'
+      :last_modified: '2019-05-24T14:52:40.4161941Z'
     modifiable: true
 - !ruby/object:KenticoCloud::Delivery::ContentItem
   source:
@@ -1299,7 +1067,7 @@ author:
       language: default
       type: author
       sitemap_locations: []
-      last_modified: '2019-04-25T19:58:55.9669979Z'
+      last_modified: '2019-05-24T14:52:53.8128455Z'
     elements:
       name:
         type: text
@@ -1333,10 +1101,10 @@ author:
         name: About
         value: Bacon enthusiast. Music advocate. Beer expert. Incurable food fan.
           Avid introvert. Freelance entrepreneur. Explorer.
-      sitemap:
+      site_content:
         type: taxonomy
-        name: Sitemap
-        taxonomy_group: sitemap
+        name: Site content
+        taxonomy_group: site_content
         value:
         - name: Authors
           codename: authors
@@ -1351,7 +1119,7 @@ author:
       :language: default
       :type: author
       :sitemap_locations: []
-      :last_modified: '2019-04-25T19:58:55.9669979Z'
+      :last_modified: '2019-05-24T14:52:53.8128455Z'
     modifiable: true
 - !ruby/object:KenticoCloud::Delivery::ContentItem
   source:
@@ -1362,7 +1130,7 @@ author:
       language: default
       type: author
       sitemap_locations: []
-      last_modified: '2019-04-25T19:58:59.873445Z'
+      last_modified: '2019-05-24T14:52:59.8759999Z'
     elements:
       name:
         type: text
@@ -1396,10 +1164,10 @@ author:
         name: About
         value: Unapologetic communicator. Travel geek. Food practitioner. Coffee maven.
           Avid internet specialist. Music nerd.
-      sitemap:
+      site_content:
         type: taxonomy
-        name: Sitemap
-        taxonomy_group: sitemap
+        name: Site content
+        taxonomy_group: site_content
         value:
         - name: Authors
           codename: authors
@@ -1414,57 +1182,5 @@ author:
       :language: default
       :type: author
       :sitemap_locations: []
-      :last_modified: '2019-04-25T19:58:59.873445Z'
-    modifiable: true
-home:
-- !ruby/object:KenticoCloud::Delivery::ContentItem
-  source:
-    system:
-      id: d98ce1a8-56dd-516c-af6a-12dc70d86b82
-      name: Welcome to Kentico Cloud Jekyll blog
-      codename: welcome_to_kentico_cloud_jekyll_blog
-      language: default
-      type: home
-      sitemap_locations: []
-      last_modified: '2019-05-06T10:02:00.9251767Z'
-    elements:
-      title:
-        type: text
-        name: Title
-        value: Welcome to Kentico Cloud Jekyll blog
-      slug:
-        type: url_slug
-        name: Slug
-        value: index
-      posts:
-        type: modular_content
-        name: Posts
-        value:
-        - a_habitant_pharetra_phasellus_urna_facilisis
-        - facilisi
-        - tempor_luctus_imperdiet_massa_id_et
-      authors:
-        type: modular_content
-        name: Authors
-        value:
-        - catherine_munoz
-        - matthew_hunter
-        - emily_black
-      sitemap:
-        type: taxonomy
-        name: Sitemap
-        taxonomy_group: sitemap
-        value: []
-  linked_items_resolver: *3
-  content_link_url_resolver: *1
-  inline_content_item_resolver: *2
-  system: !ruby/object:OpenStruct
-    table:
-      :id: d98ce1a8-56dd-516c-af6a-12dc70d86b82
-      :name: Welcome to Kentico Cloud Jekyll blog
-      :codename: welcome_to_kentico_cloud_jekyll_blog
-      :language: default
-      :type: home
-      :sitemap_locations: []
-      :last_modified: '2019-05-06T10:02:00.9251767Z'
+      :last_modified: '2019-05-24T14:52:59.8759999Z'
     modifiable: true

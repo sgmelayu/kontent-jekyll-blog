@@ -43,19 +43,13 @@
   source:
     system:
       id: 37dae20f-38b5-49d3-8ae4-3f0346df8e81
-      name: Sitemap
-      codename: sitemap
-      last_modified: '2019-04-25T19:58:37.8824036Z'
+      name: Site content
+      codename: site_content
+      last_modified: '2019-05-24T14:53:37.6489057Z'
     terms:
-    - name: Home
-      codename: home
-      terms: []
     - name: Posts
       codename: posts
       terms: []
     - name: Authors
       codename: authors
-      terms: []
-    - name: About us
-      codename: about_us
       terms: []

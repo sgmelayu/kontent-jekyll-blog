@@ -2,5 +2,11 @@
   url: /posts
 - name: Authors
   url: /authors
+- name: Content by
+  subitems:
+    - name: Category
+      url: /categories
+    - name: Tag
+      url: /tags
 - name: About us
   url: /about-us
