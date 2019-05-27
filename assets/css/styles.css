@@ -46,20 +46,8 @@ span a:not(:last-child)::after { content: ', '; }
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content { display: block; }
 
-.post-navigation { font-size: 14px; display: block; width: auto; overflow: hidden; }
-
-.post-navigation a { display: block; width: 50%; float: left; margin: 1em 0; }
-
-.post-navigation .next { text-align: right; }
-
-.post-navigation .previous { text-align: left; }
-
 .authors > article { display: flex; }
 .authors > article img { flex: 1; margin: 2rem auto; }
 .authors > article img + * { flex: 3; }
-
-.home { display: flex; }
-.home .home-subitems { margin: 0; font-size: 1.5em; flex: 1; max-width: 192px; }
-.home .home-posts { flex: 4; }
 
 .post h1, .post h2, .post h3 { text-align: revert; }
