@@ -8,6 +8,8 @@ layout: default
 
     {% for author in authors %}
         {% assign elements = author.item.elements %}
+        {% assign age = elements.date_of_birth.value | calculate_age %}
+        {% assign posts = site.posts | where_exp: 'post', 'post.item.system.language == page.language' | where_exp: 'post', 'post.item.elements.authors.value contains author.item.system.codename' %}
         <article class="main-item">
             <img src="{{ elements.avatar.value[0].url }}" alt="Avatar of {{ elements.name.value }}">
 
@@ -16,8 +18,9 @@ layout: default
 
                 <p>{{ elements.about.value }}</p>
                 <p>
-                    <span>{{ elements.date_of_birth.value | calculate_age }} years</span>
+                    <span>{{ 'year' | pluralize: age }}</span>
                     <span>{{ elements.location.value }}</span>
+                    <span>{{ 'post' | pluralize: posts.size }}</span>
                 </p>
             </section>
         </article>

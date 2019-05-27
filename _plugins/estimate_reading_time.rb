@@ -20,7 +20,7 @@ module Jekyll
 
     def pluralize_with_count(word, count)
       pluralized_word = count == 1 ? word : "#{word}s"
-      "#{count}#{pluralized_word}"
+      "#{count} #{pluralized_word}"
     end
   end
 end

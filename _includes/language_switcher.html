@@ -1,0 +1,19 @@
+{% assign page_language = include.language %}
+
+<section class="language_switcher">
+{% for language in site.kentico.languages %}
+    {% assign other_language_url = page.url | switch_url_to_language: language %}
+
+    <a
+        href="{{ other_language_url | relative_url }}"
+
+        {% if language == page_language %}
+            class="language_switcher current"
+        {% else %}
+            class="language_switcher"
+        {% endif %}
+    >
+        {{ language }}
+    </a>
+{% endfor %}
+</section>

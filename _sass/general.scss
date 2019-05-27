@@ -7,6 +7,10 @@ body {
   font-size: 1.6rem;
 }
 
+main > div {
+  text-align: center;
+}
+
 main > section, main > article {
   max-width: 768px;
   margin: 0 auto;

@@ -48,9 +48,5 @@
         {% endif %}
     {% endfor %}
 
-    {% assign other_language = page_language | get_other_language %}
-    {% if other_language %}
-        {% assign other_language_url = page.url | switch_url_to_language: other_language %}
-        <a href="{{ other_language_url | relative_url }}" style="float: right;" >{{ other_language }}</a>
-    {% endif %}
+    {% include language_switcher.html language=include.language %}
 </nav>

@@ -25,7 +25,8 @@ kentico:
   max_linked_items_depth: 5
   default_layout: default
   languages:
-    - default
+    - en-US
+    - fr-FR
   posts:
     type: blog_post
     layout: post

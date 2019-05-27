@@ -17,9 +17,10 @@
             {% endfor %}
         </span>
         <span>
-            {% for category in elements.post_categories.value %}
-            {% include category_link.html category=category language=page.language %}
-            {% endfor %}
+        {% for category in elements.post_categories.value %}
+            {% assign category_url = =page.language | append: '/categories/' | append: category.codename %}
+            <a href="{{ category_url | relative_url }}">{{ category.name }}</a>
+        {% endfor %}
         </span>
         <span>{{ elements.published.value | stringify_date: '%a, %b %d, %Y' }}</span>
     </section>

@@ -26,8 +26,6 @@ end
 class CustomSiteProcessor
   include Jekyll::Kentico::Utils
 
-  LANGUAGES = ['default']
-
   def generate(site, kentico_data)
     @site = site
     @taxonomomy_groups = kentico_data.taxonomy_groups
@@ -41,8 +39,12 @@ class CustomSiteProcessor
 
   private
 
+  def languages
+    @languages ||= @site.config['kentico']['languages']
+  end
+
   def generate_authors_pages
-    LANGUAGES.each do |language|
+    languages.each do |language|
       name = "authors-#{language}.html"
       data = {
         'title' => 'Authors',
@@ -55,7 +57,7 @@ class CustomSiteProcessor
   end
 
   def generate_home_pages
-    LANGUAGES.each do |language|
+    languages.each do |language|
       name = "home-#{language}.html"
       data = {
         'title' => 'Home',
@@ -63,7 +65,7 @@ class CustomSiteProcessor
         'permalink' => "/#{language}/posts",
         'language' => language,
       }
-      data['redirect_from'] = language == 'default' ? ['', '/', "/#{language}/"] : ["/#{language}/"]
+      data['redirect_from'] = language == languages[0] ? ['', '/', "/#{language}/"] : ["/#{language}/"]
       @site.pages << Page.new(@site, nil, data, name)
     end
   end
@@ -71,7 +73,7 @@ class CustomSiteProcessor
   def generate_tag_pages
     taxonomy_group = @taxonomomy_groups.find{ |tg| tg.system.codename == 'post_tags' }
 
-    LANGUAGES.each do |language|
+    languages.each do |language|
       tags_name = "tags-#{language}.html"
       tags_data = {
         'title' => 'Tags',
@@ -104,7 +106,7 @@ class CustomSiteProcessor
   def generate_categories_pages
     taxonomy_group = @taxonomomy_groups.find{ |tg| tg.system.codename == 'post_categories' }
 
-    LANGUAGES.each do |language|
+    languages.each do |language|
       categories_name = "categories-#{language}.html"
       categories_data = {
         'title' => 'Categories',
