@@ -14,11 +14,16 @@ main aside { max-width: 192px; }
 
 h1, h2, h3 { text-align: center; }
 
+section > h1 { font-size: 2em; }
+
 .main-item:not(:last-child) { border-bottom: 1px solid black; }
 
 span + span::before { content: '| '; }
 
 span a:not(:last-child)::after { content: ', '; }
+
+.left_sidebar { float: left; }
+.left_sidebar div { text-align: center; }
 
 /* Navbar container */
 .navbar { overflow: hidden; background-color: #333; font-family: Arial; }
