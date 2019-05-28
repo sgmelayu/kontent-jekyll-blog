@@ -2,6 +2,8 @@ html { font-size: 10px; }
 
 body { margin: 0; font-size: 1.6rem; }
 
+main > div { text-align: center; }
+
 main > section, main > article { max-width: 768px; margin: 0 auto; text-align: center; }
 main > section img, main > article img { display: block; margin: 0 auto; }
 
