@@ -5,23 +5,34 @@ layout: default
 {% assign system = page.item.system %}
 
 {% assign posts = site.posts | filter_by_language: system.language | where_linked_item_contains: 'authors', system.codename %}
+{% assign other_authors = site.authors | where_exp: 'author', 'author.item.system.language == page.language' | where_exp: 'author', 'author.item.system.codename != system.codename' %}
 
 <main>
-    <h1>{{ elements.name.value }}</h1>
+    <section class="left_sidebar">
+        <h2>Other authors:</h2>
 
-    <article>
-        <img src="{{ elements.avatar.value[0].url }}" alt="Avatar of {{ elements.name.value }}"/>
+        {% for author in other_authors %}
+        <div>{% include author_link.html language=page.language author=author %}</div>
+        {% endfor %}
+    </section>
 
-        <section>
-            <h2>Biography</h2>
+    <section>
+        <h1>{{ elements.name.value }}</h1>
 
-            <p><strong>Location</strong>: {{ elements.location.value }}</p>
-            <p><strong>Birthdate</strong>: {{ elements.date_of_birth.value | stringify_date }}</p>
-            <p><strong>About</strong>: {{ elements.about.value }}</p>
-        </section>
-    </article>
+        <article>
+            <img src="{{ elements.avatar.value[0].url }}" alt="Avatar of {{ elements.name.value }}"/>
 
-    <h2>Posts</h2>
+            <section>
+                <h2>Biography</h2>
 
-    {% include posts.html posts=posts heading_level=3 %}
+                <p><strong>Location</strong>: {{ elements.location.value }}</p>
+                <p><strong>Birthdate</strong>: {{ elements.date_of_birth.value | stringify_date }}</p>
+                <p><strong>About</strong>: {{ elements.about.value }}</p>
+            </section>
+        </article>
+
+        <h2>Posts</h2>
+
+        {% include posts.html posts=posts heading_level=3 %}
+    </section>
 </main>

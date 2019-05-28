@@ -38,6 +38,10 @@ h1, h2, h3 {
   text-align: center;
 }
 
+section > h1 {
+  font-size: 2em;
+}
+
 .main-item:not(:last-child) {
   border-bottom: 1px solid black;
 }
@@ -48,4 +52,12 @@ span + span::before {
 
 span a:not(:last-child)::after {
   content: ', ';
+}
+
+.left_sidebar {
+  float: left;
+
+  div {
+    text-align: center;
+  }
 }

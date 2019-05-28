@@ -9,9 +9,7 @@ layout: default
     {% assign posts = site.posts | where_exp: 'post', 'post.tags contains tag.codename' %}
 
     <div>
-        <a href="{{ page.language | append:'/tags/' | append: tag.codename | relative_url }}">
-            <strong>{{ tag.name }}</strong>
-        </a>
+        <strong>{% include tag_link.html language=page.language tag=tag %}</strong>
         ({{ posts.size }} posts)</div>
 {% endfor %}
 </main>

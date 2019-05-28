@@ -1,3 +1,7 @@
+def except(items, item)
+  items.select { |x| x.codename != item.codename }
+end
+
 class Page < Jekyll::Page
   def initialize(site, content, data, name, dir: '')
     @site = site
@@ -95,6 +99,7 @@ class CustomSiteProcessor
           'title' => "#{tag.name}",
           'layout' => 'tag',
           'tag' => normalize_object(tag),
+          'other_tags' => normalize_object(except(taxonomy_group.terms, tag)),
           'language' => language,
           'permalink' => "#{language}/tags/#{tag.codename}"
         }
@@ -129,6 +134,7 @@ class CustomSiteProcessor
           'layout' => 'category',
           'language' => language,
           'category' => normalize_object(category),
+          'other_categories' => normalize_object(except(taxonomy_group.terms, category)),
           'permalink' => "#{language}/categories/#{category.codename}"
         }
         @site.pages << Page.new(@site, nil, data, name, dir: dir)

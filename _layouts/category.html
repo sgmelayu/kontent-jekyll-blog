@@ -2,10 +2,20 @@
 layout: default
 ---
 <main>
-    <h1>{{ page.category.name }}</h1>
+    <section class="left_sidebar">
+        <h2>Other categories:</h2>
 
-    {% assign posts = site.posts | where_exp: 'post', 'post.item.system.language == page.language' %}
-    {% assign category_posts = posts | where_exp: 'post', 'post.categories contains page.category.codename' %}
+        {% for category in page.other_categories %}
+        <div>{% include category_link.html language=page.language category=category %}</div>
+        {% endfor %}
+    </section>
 
-    {% include posts.html posts=category_posts heading_level=2 %}
+    <section>
+        <h1>{{ page.category.name }}</h1>
+
+        {% assign posts = site.posts | where_exp: 'post', 'post.item.system.language == page.language' %}
+        {% assign category_posts = posts | where_exp: 'post', 'post.categories contains page.category.codename' %}
+
+        {% include posts.html posts=category_posts heading_level=2 %}
+    </section>
 </main>

@@ -1,0 +1,4 @@
+{% assign language = include.language %}
+{% assign tag = include.tag %}
+
+<a href="{{ language | append:'/tags/' | append: tag.codename | relative_url }}">{{ tag.name }}</a>

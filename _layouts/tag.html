@@ -2,10 +2,20 @@
 layout: default
 ---
 <main>
-    <h1>{{ page.tag.name }}</h1>
+    <section class="left_sidebar">
+        <h2>Other tags:</h2>
 
-    {% assign posts = site.posts | where_exp: 'post', 'post.item.system.language == page.language' %}
-    {% assign tag_posts = posts | where_exp: 'post', 'post.tags contains page.tag.codename' %}
+        {% for tag in page.other_tags %}
+        <div>{% include tag_link.html language=page.language tag=tag %}</div>
+        {% endfor %}
+    </section>
 
-    {% include posts.html posts=tag_posts heading_level=2 %}
+    <section>
+        <h1>{{ page.tag.name }}</h1>
+
+        {% assign posts = site.posts | where_exp: 'post', 'post.item.system.language == page.language' %}
+        {% assign tag_posts = posts | where_exp: 'post', 'post.tags contains page.tag.codename' %}
+
+        {% include posts.html posts=tag_posts heading_level=2 %}
+    </section>
 </main>

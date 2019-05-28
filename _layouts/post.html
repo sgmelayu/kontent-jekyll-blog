@@ -3,45 +3,57 @@ layout: default
 ---
 {% assign post = page.item %}
 {% assign elements = post.elements %}
-{% assign language = post.system.language %}
+{% assign system = post.system %}
+{% assign language = system.language %}
 
 {% assign published_date = elements.published.value | stringify_date: "%A, %B %d, %Y" %}
+{% assign other_posts = site.posts | where_exp: 'post', 'post.item.system.language == language' | where_exp: 'post', 'post.item.system.codename != system.codename' %}
 
 <main class="post">
-    <h1>{{ page.title  }}</h1>
+    <section class="left_sidebar">
+        <h2>Other posts:</h2>
+
+        {% for post in other_posts %}
+        <div>{% include post_link.html language=page.language post=post %}</div>
+        {% endfor %}
+    </section>
 
     <section>
-        <section>
-            <strong><label for="published_date">Published:</label></strong>
-            <span id="published_date">{{ published_date }}</span>
-        </section>
+        <h1>{{ page.title  }}</h1>
 
         <section>
-            <strong><label for="categories">Categories:</label></strong>
+            <section>
+                <strong><label for="published_date">Published:</label></strong>
+                <span id="published_date">{{ published_date }}</span>
+            </section>
 
-            <span id="categories">
+            <section>
+                <strong><label for="categories">Categories:</label></strong>
+
+                <span id="categories">
             {% for category in elements.post_categories.value %}
                 {% assign category_url = language | append: '/categories/' | append: category.codename %}
                 <a href="{{ category_url | relative_url }}">{{ category.name }}</a>
             {% endfor %}
             </span>
-        </section>
+            </section>
 
-        <section>
-            <strong><label for="tags">Tags:</label></strong>
+            <section>
+                <strong><label for="tags">Tags:</label></strong>
 
-            <span id="tags">
+                <span id="tags">
             {% for tag in elements.post_tags.value %}
                 {% assign tag_url = language | append: '/tags/' | append: tag.codename %}
                 <a href="{{ tag_url | relative_url }}">{{ tag.name }}</a>
             {% endfor %}
             </span>
+            </section>
         </section>
+
+        <article>
+            <img src="{{ elements.thumbnail.value[0].url }}" alt="">
+
+            <section>{{ elements.content.value }}</section>
+        </article>
     </section>
-
-    <article>
-        <img src="{{ elements.thumbnail.value[0].url }}" alt="">
-
-        <section>{{ elements.content.value }}</section>
-    </article>
 </main>

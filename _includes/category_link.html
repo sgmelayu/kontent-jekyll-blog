@@ -1,0 +1,4 @@
+{% assign language = include.language %}
+{% assign category = include.category %}
+
+<a href="{{ language | append:'/categories/' | append: category.codename | relative_url }}">{{ category.name }}</a>
