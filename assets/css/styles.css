@@ -53,4 +53,6 @@ span a:not(:last-child)::after { content: ', '; }
 .authors > article img { flex: 1; margin: 2rem auto; }
 .authors > article img + * { flex: 3; }
 
+.language_switcher { margin: 0; float: right; }
+
 .post h1, .post h2, .post h3 { text-align: revert; }
