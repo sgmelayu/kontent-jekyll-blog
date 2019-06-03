@@ -9,6 +9,8 @@ exclude:
   - sample-content
   - initialize-content.rb
   - README.md
+  - LICENSE
+  - KC_sample_content
 plugins:
   - jekyll-kentico
   - jekyll-redirect-from
@@ -26,7 +28,7 @@ kentico:
   default_layout: default
   languages:
     - en-US
-    - fr-FR
+    - en-GB
   posts:
     type: blog_post
     layout: post
