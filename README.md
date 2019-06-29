@@ -11,7 +11,7 @@ Find live project [here](https://radoslavk.github.io/jekyll-blog/). **WIP**
 2. Clone or download the repository.
 3. Create an account on [Kentico Cloud](https://app.kenticocloud.com/).
     1. Optionally you can create a new clean project.
-4. Set `PROJECT_ID`, `CM_API_KEY` and `DELIVERY_API_KEY` environment variables. You can find the keys under **Project settings > API keys** . `DELIVERY_API_KEY` is your primary secure key for content retrieval. It is required only if the secure access toggle is on. `CM_API_KEY (Content Management API)` is used for initializing the sample content for your project.
+4. Set `PROJECT_ID` and `DELIVERY_API_KEY` environment variables. You can find the keys under **Project settings > API keys** . `DELIVERY_API_KEY` is your primary secure key for content retrieval. It is required only if the secure access toggle is on.
 5. Install dependencies: `gem install jekyll jekyll-kentico bundler:2.0.1`
 6. Install gems in source folder: `bundle install`
 7. Initialize Kentico Cloud sample content
