@@ -23,4 +23,4 @@ Find live project [here](https://radoslavk.github.io/jekyll-blog/en-US/posts). *
     4. Copy your Content Management API key and Project Id
     5. Check 'Publish imported items'
     6. Import `KC_sample_content.zip`
-10. Execute `bundle exec jekyll build` to build or `bundle exec jekyll serve` to build and run your site.
+10. Once the import is finished execute `bundle exec jekyll build` to build or `bundle exec jekyll serve` to build and run your site.
