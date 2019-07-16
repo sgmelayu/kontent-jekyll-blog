@@ -17,7 +17,6 @@ plugins:
 permalink: /:collection/:name
 kentico:
   project_id: ENV_PROJECT_ID
-  secure_key: ENV_DELIVERY_API_KEY
   front_matter_resolver: FrontMatterResolver
   filename_resolver: FilenameResolver
   data_resolver: DataResolver
