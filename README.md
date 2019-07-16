@@ -16,13 +16,16 @@ Steps 1 and 3 require administrator privileges.
 5. Create an account on [Kentico Cloud](https://app.kenticocloud.com/).
     1. Optionally you can create a new clean project.
 6. Go to Project settings > API keys.
-8. Turn on Delivery API Secure Access and Content Management API toggle.
-7. Set `PROJECT_ID` and `DELIVERY_API_KEY` OS environment variables. `DELIVERY_API_KEY` is your primary secure key for content retrieval. It is required only if the secure access toggle is on. Content Management API key is used for externally updating project content.
-9. Initialize Kentico Cloud sample content
+7. Set `project_id` in `_config.yml` to your Project ID from API keys page. 
+8. Initialize Kentico Cloud sample content
     1. In your KC project open Settings, then Localization. Click `Default project language` and rename codename to `en-US`
     2. Create new language with codename `en-GB` 
     3. [Open KC Template Manager](https://kentico.github.io/cloud-template-manager/import-from-file)
     4. Copy your Content Management API key and Project Id
     5. Check 'Publish imported items'
     6. Import `KC_sample_content.zip`
-10. Once the import is finished execute `bundle exec jekyll build` to build or `bundle exec jekyll serve` to build and run your site.
+9. Once the import is finished execute `bundle exec jekyll build` to build or `bundle exec jekyll serve` to build and run your site.
+
+## Custom configuration
+
+You can learn more on the [plugin's wiki](https://github.com/RadoslavK/jekyll-kentico/wiki).
