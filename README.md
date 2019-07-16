@@ -7,7 +7,7 @@ Find live project [here](https://radoslavk.github.io/jekyll-blog/en-US/posts). *
 
 ## How to run
 
-Steps 1 and 3 reqiore
+Steps 1 and 3 require administrator privileges.
 
 1. Install [Ruby](https://www.ruby-lang.org/en/downloads/) (v2.6.3+) with DevKit and [RubyGems](https://rubygems.org/pages/download). You need to have MSYS2 on your system if you are using Windows and it can be installed via DevKit.
 2. Clone or download the repository.
