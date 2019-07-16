@@ -17,7 +17,7 @@ Steps 1 and 3 require administrator privileges.
     1. Optionally you can create a new clean project.
 6. Go to Project settings > API keys.
 8. Turn on Delivery API Secure Access and Content Management API toggle.
-7. Set `PROJECT_ID` and `DELIVERY_API_KEY` system environment variables. `DELIVERY_API_KEY` is your primary secure key for content retrieval. It is required only if the secure access toggle is on. Content Management API key is used for externally updating project content.
+7. Set `PROJECT_ID` and `DELIVERY_API_KEY` OS environment variables. `DELIVERY_API_KEY` is your primary secure key for content retrieval. It is required only if the secure access toggle is on. Content Management API key is used for externally updating project content.
 9. Initialize Kentico Cloud sample content
     1. In your KC project open Settings, then Localization. Click `Default project language` and rename codename to `en-US`
     2. Create new language with codename `en-GB` 
