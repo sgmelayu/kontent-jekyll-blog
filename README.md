@@ -11,7 +11,7 @@ Steps 1 and 3 require administrator privileges.
 
 1. Install [Ruby](https://www.ruby-lang.org/en/downloads/) (v2.6.3+) with DevKit and [RubyGems](https://rubygems.org/pages/download). You need to have MSYS2 on your system if you are using Windows and it can be installed via DevKit. Choose 3rd option in the DevKit console installer to install MSYS2 and MINGW development toolchain.
 2. Clone or download the repository.
-3. Install dependencies: `gem install jekyll jekyll-kentico bundler:2.0.1`
+3. Install dependencies: `gem install jekyll jekyll-kentico bundler:2.0.1` and confirm overriding the bundler version installed with Ruby env
 4. Install gems in source folder: `bundle update`
 5. Create an account on [Kentico Cloud](https://app.kenticocloud.com/).
     1. Optionally you can create a new clean project.
