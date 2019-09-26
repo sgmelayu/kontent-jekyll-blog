@@ -11,6 +11,6 @@ class FilenameResolver
   end
 
   def slug?(element)
-    element.type == Jekyll::Kentico::Constants::ItemElementType::URL_SLUG
+    element.type == Kentico::Kontent::Jekyll::Constants::ItemElementType::URL_SLUG
   end
 end

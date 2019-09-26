@@ -64,7 +64,7 @@ end
 =end
 
 class CustomSiteProcessor
-  include Jekyll::Kentico::Utils
+  include Kentico::Kontent::Jekyll::Utils
 
   def generate(site, kentico_data)
     @site = site

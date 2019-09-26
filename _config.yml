@@ -10,7 +10,7 @@ exclude:
   - initialize-content.rb
   - README.md
   - LICENSE
-  - KC_sample_content
+  - KK_sample_content
 plugins:
   - jekyll-kentico
   - jekyll-redirect-from

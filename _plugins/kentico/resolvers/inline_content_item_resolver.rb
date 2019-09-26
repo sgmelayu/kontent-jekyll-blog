@@ -1,4 +1,4 @@
-class InlineContentItemResolver < KenticoCloud::Delivery::Resolvers::InlineContentItemResolver
+class InlineContentItemResolver < Kentico::Kontent::Delivery::Resolvers::InlineContentItemResolver
   def resolve_item(item)
     type = item.system.type
 

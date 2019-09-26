@@ -1,4 +1,4 @@
-class ContentLinkResolver < KenticoCloud::Delivery::Resolvers::ContentLinkResolver
+class ContentLinkResolver < Kentico::Kontent::Delivery::Resolvers::ContentLinkResolver
   def resolve_link(link)
     <<~LINK
       {% assign link_id = '#{link.id}' %}
