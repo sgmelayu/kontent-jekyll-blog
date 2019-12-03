@@ -57,3 +57,8 @@ layout: default
         </article>
     </section>
 </main>
+
+
+{% assign identifier = language | append: '|' | append: system.id %}
+
+{% include disqus.html identifier=identifier %}
