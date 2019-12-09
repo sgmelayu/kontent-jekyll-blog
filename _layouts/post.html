@@ -8,6 +8,7 @@ layout: default
 
 {% assign published_date = elements.published.value | stringify_date: "%A, %B %d, %Y" %}
 {% assign other_posts = site.posts | where_exp: 'post', 'post.item.system.language == language' | where_exp: 'post', 'post.item.system.codename != system.codename' %}
+{% assign author = elements.author %}
 
 <main class="post">
     <section class="left_sidebar">
@@ -25,6 +26,17 @@ layout: default
             <section>
                 <strong><label for="published_date">Published:</label></strong>
                 <span id="published_date">{{ published_date }}</span>
+            </section>
+
+            <section>
+                <strong><label for="authors">Authors:</label></strong>
+
+                <span id="authors">
+            {% for author_codename in elements.authors.value %}
+                {% assign author_page = site.authors | where_exp: 'author', 'author.item.system.language == page.language' | where_exp: 'author', 'author.item.system.codename == author_codename' | first %}
+                <a href="{{ author_page.url | relative_url }}">{{ author_page.item.elements.name.value }}</a>
+            {% endfor %}
+            </span>
             </section>
 
             <section>
