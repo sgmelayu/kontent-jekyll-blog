@@ -17,7 +17,7 @@ GEM
     mustermann (1.0.3)
     openssl (2.0.9)
     public_suffix (3.0.3)
-    rack (2.0.6)
+    rack (2.0.8)
     rack-protection (2.0.5)
       rack
     sinatra (2.0.5)
@@ -28,9 +28,11 @@ GEM
     tilt (2.0.9)
     unf (0.1.4)
       unf_ext
+    unf_ext (0.0.7.5)
     unf_ext (0.0.7.5-x64-mingw32)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
