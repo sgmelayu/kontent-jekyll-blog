@@ -1,7 +1,7 @@
 future: true
 name: Radek
 auto: false
-baseurl: /jekyll-blog
+baseurl: /kontent-jekyll-blog
 sass:
   style: compact # possible values: nested expanded compact compressed
 exclude:
@@ -12,7 +12,7 @@ exclude:
   - LICENSE
   - KK_sample_content
 plugins:
-  - jekyll-kentico
+  - kontent-jekyll
   - jekyll-redirect-from
 permalink: /:collection/:name
 kentico:

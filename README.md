@@ -1,9 +1,9 @@
 # Jekyll Blog
 
 Sample blog website built in Jekyll static site generator, using headless CMS Kentico Kontent as a content repository and
-[jekyll-kentico plugin](https://github.com/RadoslavK/jekyll-kentico) for content and data import. 
+[kontent-jekyll plugin](https://github.com/RadoslavK/kontent-jekyll) for content and data import. 
 
-Find live sample project [here](https://radoslavk.github.io/jekyll-blog/en-US/posts).
+Find live sample project [here](https://radoslavk.github.io/kontent-jekyll-blog/en-US/posts).
 
 ## How to run
 
@@ -11,7 +11,7 @@ Steps 1 and 3 require administrator privileges.
 
 1. Install [Ruby](https://www.ruby-lang.org/en/downloads/) (v2.6.3+) with DevKit and [RubyGems](https://rubygems.org/pages/download). You need to have MSYS2 on your system if you are using Windows and it can be installed via DevKit. Choose 3rd option in the DevKit console installer to install MSYS2 and MINGW development toolchain.
 2. Clone or download the repository.
-3. Install dependencies: `gem install jekyll jekyll-kentico bundler:2.0.1` and confirm overriding the bundler version installed with Ruby env
+3. Install dependencies: `gem install jekyll kontent-jekyll bundler:2.0.1` and confirm overriding the bundler version installed with Ruby env
 4. Install gems in source folder: `bundle update`
 5. Create an account on [Kentico Kontent](https://app.kenticocloud.com/).
     1. Optionally you can create a new clean project.
@@ -28,4 +28,4 @@ Steps 1 and 3 require administrator privileges.
 
 ## Custom configuration
 
-You can learn more on the [plugin's wiki](https://github.com/RadoslavK/jekyll-kentico/wiki).
+You can learn more on the [plugin's wiki](https://github.com/RadoslavK/kontent-jekyll/wiki).

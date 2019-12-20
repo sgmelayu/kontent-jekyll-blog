@@ -30,11 +30,11 @@ private
 
   def resolve_element(element, codename, item)
     case element.type
-    when Kentico::Kontent::Jekyll::Constants::ItemElementType::ASSET
+    when Kentico::Kontent::Constants::ItemElementType::ASSET
       element.value.map { |asset| asset['url'] }
-    when Kentico::Kontent::Jekyll::Constants::ItemElementType::RICH_TEXT
+    when Kentico::Kontent::Constants::ItemElementType::RICH_TEXT
       item.get_string codename.to_s
-    when Kentico::Kontent::Jekyll::Constants::ItemElementType::LINKED_ITEMS
+    when Kentico::Kontent::Constants::ItemElementType::LINKED_ITEMS
       return [] if @depth > 4
 
       item.get_links(codename.to_s).map { |linked_item| resolve_internal(linked_item, @depth + 1) }
