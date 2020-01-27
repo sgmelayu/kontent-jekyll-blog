@@ -2,43 +2,8 @@ def except(items, item)
   items.select { |x| x.codename != item.codename }
 end
 
-def create_page(site, data, name, dir: '')
-  page = Jekyll::Page.allocate
-
-  # A hack to create a Jekyll::Page with custom constructor without overriding the class
-  # because jekyll-redirect-from can work only with Jekyll::Page instances.
-  page.define_singleton_method(:initialize) do
-    @site = site
-    @base = site.source
-    @dir = dir
-    @name = name
-    @path = if site.in_theme_dir(@base) == @base
-              site.in_theme_dir(@base, @dir, @name)
-            else
-              site.in_source_dir(@base, @dir, @name)
-            end
-
-    self.process(@name)
-
-    self.data = data
-    self.content = content
-
-    data.default_proc = proc do |_, key|
-      site.frontmatter_defaults.find(File.join(@dir, @name), type, key)
-    end
-
-    Jekyll::Hooks.trigger :pages, :post_init, self
-
-    self
-  end
-
-  page.initialize
-end
-
-=begin
-Custom pages do not work with redirects yet
 class Page < Jekyll::Page
-  def initialize(site, content, data, name, dir: '')
+  def initialize(site, data, name, dir = '', content = nil)
     @site = site
     @base = site.source
     @dir = dir
@@ -61,7 +26,6 @@ class Page < Jekyll::Page
     Jekyll::Hooks.trigger :pages, :post_init, self
   end
 end
-=end
 
 class CustomSiteProcessor
   include Kentico::Kontent::Utils
@@ -92,7 +56,7 @@ class CustomSiteProcessor
         'permalink' => "/#{language}/authors",
         'language' => language
       }
-      @site.pages << create_page(@site, data, name)
+      @site.pages << Page.new(@site, data, name)
     end
   end
 
@@ -106,7 +70,7 @@ class CustomSiteProcessor
         'language' => language,
       }
       data['redirect_from'] = language == languages[0] ? ['', '/', "/#{language}/"] : ["/#{language}/"]
-      @site.pages << create_page(@site, data, name)
+      @site.pages << Page.new(@site, data, name)
     end
   end
 
@@ -126,7 +90,7 @@ class CustomSiteProcessor
         'permalink' => "/#{language}/tags"
       }
 
-      @site.pages << create_page(@site, tags_data, tags_name)
+      @site.pages << Page.new(@site, tags_data, tags_name)
 
       taxonomy_group.terms.each do |tag|
         name = "#{tag.codename}-#{language}.html"
@@ -139,7 +103,7 @@ class CustomSiteProcessor
           'language' => language,
           'permalink' => "#{language}/tags/#{tag.codename}"
         }
-        @site.pages << create_page(@site, data, name, dir: dir)
+        @site.pages << Page.new(@site, data, name, dir)
       end
     end
   end
@@ -160,7 +124,7 @@ class CustomSiteProcessor
         'permalink' => "/#{language}/categories"
       }
 
-      @site.pages << create_page(@site, categories_data, categories_name)
+      @site.pages << Page.new(@site, categories_data, categories_name)
 
       taxonomy_group.terms.each do |category|
         name = "#{category.codename}-#{language}.html"
@@ -173,7 +137,7 @@ class CustomSiteProcessor
           'other_categories' => normalize_object(except(taxonomy_group.terms, category)),
           'permalink' => "#{language}/categories/#{category.codename}"
         }
-        @site.pages << create_page(@site, data, name, dir: dir)
+        @site.pages << Page.new(@site, data, name, dir)
       end
     end
   end

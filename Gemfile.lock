@@ -12,20 +12,20 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7-x64-mingw32)
-    ffi (1.11.3-x64-mingw32)
+    ffi (1.12.1-x64-mingw32)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
     forwardable-extended (2.6.0)
-    http (4.2.0)
+    http (4.3.0)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
-      http-form_data (~> 2.0)
+      http-form_data (~> 2.2)
       http-parser (~> 1.2.0)
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    http-form_data (2.1.1)
+    http-form_data (2.2.0)
     http-parser (1.2.1)
       ffi-compiler (>= 1.0, < 2.0)
     http_parser.rb (0.6.0)
@@ -46,7 +46,7 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.13.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-redirect-from (0.15.0)
+    jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
@@ -58,7 +58,7 @@ GEM
       dotenv (~> 2.7.0)
       nokogiri (~> 1.10.0, >= 1.8.4)
       rest-client (~> 2.1.0.rc1, >= 2.1.0.rc1)
-    kontent-jekyll (0.11.1)
+    kontent-jekyll (0.11.2)
       kontent-delivery-sdk-ruby (~> 2.0)
     kramdown (1.17.0)
     liquid (4.0.3)
@@ -90,7 +90,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rouge (3.14.0)
+    rouge (3.15.0)
     safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -111,7 +111,7 @@ PLATFORMS
 DEPENDENCIES
   http!
   jekyll (= 3.8.6)!
-  jekyll-redirect-from!
+  jekyll-redirect-from (~> 0.16)!
   kontent-jekyll (~> 0.11)!
   minima (~> 2.0)!
   tzinfo-data!
