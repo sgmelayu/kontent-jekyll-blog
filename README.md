@@ -33,3 +33,17 @@ Steps 1 and 3 require administrator privileges.
 ## Custom configuration
 
 You can learn more on the [plugin's wiki](https://github.com/RadoslavK/kontent-jekyll/wiki).
+
+## Feedback & Contributing
+
+Check out the [contributing](https://github.com/RadoslavK/kontent-jekyll-blog/blob/master/CONTRIBUTING.md) page to see the best places to file issues, start discussions, and begin contributing.
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Code of Conduct
+
+Everyone interacting in the Kontent-Jekyll project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/RadoslavK/kontent-jekyll-blog/blob/master/CODE_OF_CONDUCT.md).
+
+![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/RadoslavK/kontent-jekyll-blog?pixel)
