@@ -1,3 +1,7 @@
+[![Build Status](https://api.travis-ci.com/RadoslavK/kontent-jekyll-blog.svg?branch=master)](https://travis-ci.com/RadoslavK/kontent-jekyll-blog)
+[![Join the chat at https://kentico-community.slack.com](https://img.shields.io/badge/join-slack-E6186D.svg)](https://kentico-community.slack.com)
+[![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-kontent)
+
 # Jekyll Blog
 
 Sample blog website built in Jekyll static site generator, using headless CMS Kentico Kontent as a content repository and
