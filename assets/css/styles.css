@@ -5,11 +5,13 @@ body { margin: 0; font-size: 1.6rem; }
 main > div { text-align: center; }
 
 main > section, main > article { max-width: 768px; margin: 0 auto; text-align: center; }
+
 main > section img, main > article img { display: block; margin: 0 auto; }
 
 * + section { margin: 1rem; }
 
 main { margin-top: 1em; }
+
 main aside { max-width: 192px; }
 
 h1, h2, h3 { text-align: center; }
@@ -23,6 +25,7 @@ span + span::before { content: '| '; }
 span a:not(:last-child)::after { content: ', '; }
 
 .left_sidebar { float: left; }
+
 .left_sidebar div { text-align: center; }
 
 /* Navbar container */
@@ -30,6 +33,7 @@ span a:not(:last-child)::after { content: ', '; }
 
 /* Links inside the navbar */
 .navbar a { float: left; font-size: 16px; color: white; text-align: center; padding: 14px 16px; text-decoration: none; }
+
 .navbar a.current { color: green; }
 
 /* The dropdown container */
@@ -37,6 +41,7 @@ span a:not(:last-child)::after { content: ', '; }
 
 /* Dropdown button */
 .dropdown .dropbtn { font-size: 16px; border: none; outline: none; color: white; padding: 14px 16px; background-color: inherit; font-family: inherit; /* Important for vertical align on mobile phones */ margin: 0; /* Important for vertical align on mobile phones */ }
+
 .dropdown .dropbtn.current { color: green; }
 
 /* Add a red background color to navbar links on hover */
@@ -55,9 +60,13 @@ span a:not(:last-child)::after { content: ', '; }
 .dropdown:hover .dropdown-content { display: block; }
 
 .authors > article { display: flex; }
+
 .authors > article img { flex: 1; margin: 2rem auto; }
+
 .authors > article img + * { flex: 3; }
 
 .language_switcher { margin: 0; float: right; }
 
 .post h1, .post h2, .post h3 { text-align: revert; }
+
+/*# sourceMappingURL=styles.css.map */
