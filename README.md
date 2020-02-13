@@ -1,11 +1,11 @@
-[![Build Status](https://api.travis-ci.com/RadoslavK/kontent-jekyll-blog.svg?branch=master)](https://travis-ci.com/RadoslavK/kontent-jekyll-blog)
+[![Build Status](https://api.travis-ci.com/Kentico/kontent-jekyll-blog.svg?branch=master)](https://travis-ci.com/Kentico/kontent-jekyll-blog)
 [![Join the chat at https://kentico-community.slack.com](https://img.shields.io/badge/join-slack-E6186D.svg)](https://kentico-community.slack.com)
 [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-kontent)
 
 # Jekyll Blog
 
 Sample blog website built in Jekyll static site generator, using headless CMS Kentico Kontent as a content repository and
-[kontent-jekyll plugin](https://github.com/RadoslavK/kontent-jekyll) for content and data import. 
+[kontent-jekyll plugin](https://github.com/Kentico/kontent-jekyll) for content and data import. 
 
 Find live sample project [here](https://radoslavk.github.io/kontent-jekyll-blog/en-US/posts).
 
@@ -32,11 +32,11 @@ Steps 1 and 3 require administrator privileges.
 
 ## Custom configuration
 
-You can learn more on the [plugin's wiki](https://github.com/RadoslavK/kontent-jekyll/wiki).
+You can learn more on the [plugin's wiki](https://github.com/Kentico/kontent-jekyll/wiki).
 
 ## Feedback & Contributing
 
-Check out the [contributing](https://github.com/RadoslavK/kontent-jekyll-blog/blob/master/CONTRIBUTING.md) page to see the best places to file issues, start discussions, and begin contributing.
+Check out the [contributing](https://github.com/Kentico/kontent-jekyll-blog/blob/master/CONTRIBUTING.md) page to see the best places to file issues, start discussions, and begin contributing.
 
 ## License
 
@@ -44,6 +44,6 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Kontent-Jekyll project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/RadoslavK/kontent-jekyll-blog/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Kontent-Jekyll project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/Kentico/kontent-jekyll-blog/blob/master/CODE_OF_CONDUCT.md).
 
-![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/RadoslavK/kontent-jekyll-blog?pixel)
+![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/kontent-jekyll-blog?pixel)
