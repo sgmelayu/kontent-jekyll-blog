@@ -7,7 +7,7 @@
 Sample blog website built in Jekyll static site generator, using headless CMS Kentico Kontent as a content repository and
 [kontent-jekyll plugin](https://github.com/Kentico/kontent-jekyll) for content and data import. 
 
-Find live sample project [here](https://radoslavk.github.io/kontent-jekyll-blog/en-US/posts).
+Find live sample project [here](https://kentico.github.io/kontent-jekyll-blog/).
 
 ## How to run
 
