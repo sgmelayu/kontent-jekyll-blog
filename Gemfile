@@ -11,6 +11,6 @@ source 'https://rubygems.org' do
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
   group :jekyll_plugins do
-    gem 'kontent-jekyll', '~> 0.11'
+    gem 'kontent-jekyll', '~> 1.0'
   end
 end

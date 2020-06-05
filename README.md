@@ -20,14 +20,16 @@ Steps 1 and 3 require administrator privileges.
 5. Create an account on [Kentico Kontent](https://app.kenticocloud.com/).
     1. Optionally you can create a new clean project.
 6. Go to Project settings > API keys.
-7. Set `project_id` in `_config.yml` to your Project ID from API keys page. 
-8. Initialize Kentico Kontent sample content
+7. Activate Management API
+8. Set `project_id` in `_config.yml` to your Project ID from API keys page. 
+9. Initialize Kentico Kontent sample content
     1. In your KK project open Settings, then Localization. Click `Default project language` and rename codename to `en-US`
     2. Create new language with codename `en-GB` 
-    3. [Open KK Template Manager](https://kentico.github.io/kontent-template-manager/import-from-file)
+    3. [Open KK Template Manager](https://kentico.github.io/kontent-template-manager/import)
     4. Copy your Content Management API key and Project Id
-    5. Check 'Publish imported items'
-    6. Import `KK_sample_content.zip`
+    5. Check 'Publish language variants after import'
+    6. Upload `KK_sample_content.zip`
+    7. Click on 'Import data'
 9. Once the import is finished execute `bundle exec jekyll build` to build or `bundle exec jekyll serve` to build and run your site.
 
 ## Custom configuration
