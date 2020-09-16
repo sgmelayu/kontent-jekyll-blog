@@ -64,7 +64,7 @@ GEM
       rest-client (~> 2.1.0.rc1, >= 2.1.0.rc1)
     kontent-jekyll (1.0.0)
       kontent-delivery-sdk-ruby (~> 2.0)
-    kramdown (2.2.1)
+    kramdown (2.3.0)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
