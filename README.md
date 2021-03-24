@@ -1,6 +1,6 @@
 # Jekyll Blog
 
-[![Ruby](https://github.com/Kentico/kontent-jekyll-blog/actions/workflows/buil.yml/badge.svg)](https://github.com/Kentico/kontent-jekyll-blog/actions/workflows/buil.yml)
+[![Build](https://github.com/Kentico/kontent-jekyll-blog/actions/workflows/buil.yml/badge.svg)](https://github.com/Kentico/kontent-jekyll-blog/actions/workflows/buil.yml)
 
 [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-kontent)
 [![GitHub Discussions](https://img.shields.io/badge/GitHub-Discussions-FE7A16.svg?style=popout&logo=github)](https://github.com/Kentico/Home/discussions)
