@@ -22,9 +22,9 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Update gems
-      uses: gem update --system
+      run: gem update --system
     - name: Install required packages
-      uses: gem install jekyll bundler kontent-jekyll
+      run: gem install jekyll bundler kontent-jekyll
     - name: Build the output
-      uses: JEKYLL_ENV=production bundle exec jekyll build
+      run: JEKYLL_ENV=production bundle exec jekyll build
 
