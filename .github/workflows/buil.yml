@@ -30,4 +30,4 @@ jobs:
       - name: Build the output
         run: bundle exec jekyll build
         env: 
-          JEKYLL_ENV=production
+          JEKYLL_ENV: production
