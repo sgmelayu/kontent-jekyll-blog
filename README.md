@@ -1,11 +1,12 @@
-[![Build Status](https://api.travis-ci.com/Kentico/kontent-jekyll-blog.svg?branch=master)](https://travis-ci.com/Kentico/kontent-jekyll-blog)
-[![Join the chat at https://kentico-community.slack.com](https://img.shields.io/badge/join-slack-E6186D.svg)](https://kentico-community.slack.com)
-[![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-kontent)
-
 # Jekyll Blog
 
+[![Build](https://github.com/Kentico/kontent-jekyll-blog/actions/workflows/buil.yml/badge.svg)](https://github.com/Kentico/kontent-jekyll-blog/actions/workflows/buil.yml)
+
+[![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-kontent)
+[![GitHub Discussions](https://img.shields.io/badge/GitHub-Discussions-FE7A16.svg?style=popout&logo=github)](https://github.com/Kentico/Home/discussions)
+
 Sample blog website built in Jekyll static site generator, using headless CMS Kentico Kontent as a content repository and
-[kontent-jekyll plugin](https://github.com/Kentico/kontent-jekyll) for content and data import. 
+[kontent-jekyll plugin](https://github.com/Kentico/kontent-jekyll) for content and data import.
 
 Find live sample project [here](https://kentico.github.io/kontent-jekyll-blog/).
 

@@ -1,0 +1,41 @@
+name: Ruby
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version: ["2.6"]
+
+    env:
+      PROJECT_ID: ${{ secrets.PROJECT_ID }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - name: Update gems
+        run: gem update --system
+      - name: Install required packages
+        run: gem install jekyll bundler kontent-jekyll
+      - name: Build the output
+        run: bundle exec jekyll build
+        env: 
+          JEKYLL_ENV: production
+      - name: Deploy 🚀
+        if: github.ref == 'refs/heads/master'
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: _site
+          CLEAN: true # Automatically remove deleted files from the deploy branch
