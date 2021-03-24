@@ -6,7 +6,7 @@
 [![GitHub Discussions](https://img.shields.io/badge/GitHub-Discussions-FE7A16.svg?style=popout&logo=github)](https://github.com/Kentico/Home/discussions)
 
 Sample blog website built in Jekyll static site generator, using headless CMS Kentico Kontent as a content repository and
-[kontent-jekyll plugin](https://github.com/Kentico/kontent-jekyll) for content and data import. 
+[kontent-jekyll plugin](https://github.com/Kentico/kontent-jekyll) for content and data import.
 
 Find live sample project [here](https://kentico.github.io/kontent-jekyll-blog/).
 
