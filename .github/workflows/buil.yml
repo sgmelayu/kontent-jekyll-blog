@@ -1,0 +1,30 @@
+name: Ruby
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version: ['2.6']
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby-version }}
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - name: Update gems
+      uses: gem update --system
+    - name: Install required packages
+      uses: gem install jekyll bundler kontent-jekyll
+    - name: Build the output
+      uses: JEKYLL_ENV=production bundle exec jekyll build
+
