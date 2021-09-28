@@ -7,14 +7,13 @@ GEM
     concurrent-ruby (1.1.6)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    dotenv (2.7.5)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
     eventmachine (1.2.7-x64-mingw32)
-    ffi (1.13.0)
-    ffi (1.13.0-x64-mingw32)
+    ffi (1.15.4)
+    ffi (1.15.4-x64-mingw32)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -25,7 +24,7 @@ GEM
       http-form_data (~> 2.2)
       http-parser (~> 1.2.0)
     http-accept (1.7.0)
-    http-cookie (1.0.3)
+    http-cookie (1.0.4)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
     http-parser (1.2.1)
@@ -58,9 +57,8 @@ GEM
       jekyll (>= 3.3, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    kontent-delivery-sdk-ruby (2.0.16)
-      dotenv (~> 2.7.0)
-      nokogiri (~> 1.10.8, >= 1.8.4)
+    kontent-delivery-sdk-ruby (2.0.25)
+      nokogiri (~> 1.11, >= 1.11.0)
       rest-client (~> 2.1.0.rc1, >= 2.1.0.rc1)
     kontent-jekyll (1.0.0)
       kontent-delivery-sdk-ruby (~> 2.0)
@@ -75,20 +73,22 @@ GEM
     mercenary (0.3.6)
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2020.0512)
-    mini_portile2 (2.4.0)
+    mime-types-data (3.2021.0901)
+    mini_portile2 (2.6.1)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
     netrc (0.11.0)
-    nokogiri (1.10.9)
-      mini_portile2 (~> 2.4.0)
-    nokogiri (1.10.9-x64-mingw32)
-      mini_portile2 (~> 2.4.0)
+    nokogiri (1.12.5)
+      mini_portile2 (~> 2.6.1)
+      racc (~> 1.4)
+    nokogiri (1.12.5-x64-mingw32)
+      racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.5)
+    racc (1.5.2)
     rake (13.0.1)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
@@ -119,8 +119,8 @@ GEM
       tzinfo (>= 1.0.0)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.7)
-    unf_ext (0.0.7.7-x64-mingw32)
+    unf_ext (0.0.8)
+    unf_ext (0.0.8-x64-mingw32)
     unicode-display_width (1.7.0)
 
 PLATFORMS
@@ -131,9 +131,9 @@ DEPENDENCIES
   http!
   jekyll (= 4.0.0)!
   jekyll-redirect-from (~> 0.16)!
-  kontent-jekyll (~> 1.0)!
+  kontent-jekyll (~> 1.0, >= 1.0.0)!
   minima (~> 2.0)!
   tzinfo-data!
 
 BUNDLED WITH
-   2.0.1
+   2.1.4
