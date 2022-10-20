@@ -1,5 +1,10 @@
 # Jekyll Blog
 
+[![No Maintenance Intended](https://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
+## :warning: Deprecation Notice
+> This repository has been archived and is no longer maintained.
+
 [![Build](https://github.com/Kentico/kontent-jekyll-blog/actions/workflows/buil.yml/badge.svg)](https://github.com/Kentico/kontent-jekyll-blog/actions/workflows/buil.yml)
 
 [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-kontent)
