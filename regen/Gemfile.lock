@@ -1,35 +1,45 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.5.2)
-      public_suffix (>= 2.0.2, < 4.0)
-    domain_name (0.5.20180417)
+    addressable (2.8.2)
+      public_suffix (>= 2.0.2, < 6.0)
+    domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    http (4.0.0)
-      addressable (~> 2.3)
+    ffi (1.15.5)
+    ffi (1.15.5-x64-mingw32)
+    ffi-compiler (1.0.1)
+      ffi (>= 1.0.0)
+      rake
+    http (5.1.1)
+      addressable (~> 2.8)
       http-cookie (~> 1.0)
-      http-form_data (~> 2.0)
-      http_parser.rb (~> 0.6.0)
-    http-cookie (1.0.3)
+      http-form_data (~> 2.2)
+      llhttp-ffi (~> 0.4.0)
+    http-cookie (1.0.5)
       domain_name (~> 0.5)
-    http-form_data (2.1.1)
-    http_parser.rb (0.6.0)
-    mustermann (1.0.3)
+    http-form_data (2.3.0)
+    llhttp-ffi (0.4.0)
+      ffi-compiler (~> 1.0)
+      rake (~> 13.0)
+    mustermann (2.0.2)
+      ruby2_keywords (~> 0.0.1)
     openssl (2.0.9)
-    public_suffix (3.0.3)
-    rack (2.2.2)
-    rack-protection (2.0.5)
+    public_suffix (5.0.1)
+    rack (2.2.6.4)
+    rack-protection (2.2.4)
       rack
-    sinatra (2.0.5)
-      mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.5)
+    rake (13.0.6)
+    ruby2_keywords (0.0.5)
+    sinatra (2.2.4)
+      mustermann (~> 2.0)
+      rack (~> 2.2)
+      rack-protection (= 2.2.4)
       tilt (~> 2.0)
-    tilt (2.0.9)
+    tilt (2.1.0)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.5)
-    unf_ext (0.0.7.5-x64-mingw32)
+    unf_ext (0.0.8.2)
+    unf_ext (0.0.8.2-x64-mingw32)
 
 PLATFORMS
   ruby
@@ -38,7 +48,7 @@ PLATFORMS
 DEPENDENCIES
   http
   openssl (~> 2.0.0.beta.2)
-  sinatra (~> 2.0, >= 2.0.5)
+  sinatra (~> 2.2, >= 2.2.3)
 
 BUNDLED WITH
-   2.0.1
+   2.1.4
