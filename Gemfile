@@ -4,7 +4,7 @@ source 'https://rubygems.org' do
 
   gem 'http'
 
-  gem 'jekyll', '4.0.0'
+  gem 'jekyll', '4.0.1'
   gem 'jekyll-redirect-from', '~> 0.16'
   # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 
