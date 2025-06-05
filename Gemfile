@@ -1,10 +1,10 @@
 source 'https://rubygems.org' do
   # This is the default theme for new Jekyll sites. You may change this to anything you like.
-  gem 'minima', '~> 2.0'
+  gem 'minima', '~> 2.5', '>= 2.5.2'
 
   gem 'http'
 
-  gem 'jekyll', '4.0.0'
+  gem 'jekyll', '4.0.1'
   gem 'jekyll-redirect-from', '~> 0.16'
   # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 
